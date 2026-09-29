@@ -346,16 +346,44 @@
   /* Fill selection frames independently of the portrait's intrinsic dimensions. */
   body.is-playing .pick-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center 25%}
 
-  /* Reliability fix: never keep contestant portraits/names hidden while waiting for image load events. */
-  body.is-playing .pick-photo img {
-    opacity: 1 !important;
-    filter: none !important;
-    transform: none !important;
+  /* MOBILE/Safari robustness fix:
+     Do not depend on image decode/photo-ready to size or reveal cards. */
+  body.is-playing .pick-grid .pick-card{
+    aspect-ratio:1/1 !important;
+    min-height:0 !important;
+    height:auto !important;
   }
-  body.is-playing .pick-name {
-    opacity: 1 !important;
-    transform: none !important;
+  body.is-playing .pick-grid .pick-photo,
+  body.is-playing .nine-grid .pick-photo,
+  body.is-playing .pk-grid .pick-photo{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    aspect-ratio:auto !important;
+    display:block !important;
   }
+  body.is-playing .pick-photo:before{
+    display:none !important;
+  }
+  body.is-playing .pick-photo img{
+    position:absolute !important;
+    inset:0 !important;
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    opacity:1 !important;
+    filter:none !important;
+    transform:none !important;
+    object-fit:cover !important;
+    object-position:center 25% !important;
+  }
+  body.is-playing .pick-name,
+  body.is-playing .nine-grid .pick-name{
+    opacity:1 !important;
+    transform:none !important;
+  }
+
 </style>
 </head>
 <body>
