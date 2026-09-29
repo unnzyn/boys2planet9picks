@@ -345,6 +345,17 @@
   @media(max-width:600px){body.is-playing .screen:not(.result-screen){padding:75px 14px 20px}body.is-playing .screen .progress{top:47px;left:24px;right:24px}body.is-playing .screen:not([hidden]):before{top:12px;font-size:11px}body.is-playing .restart-fixed{top:13px;right:17px;font-size:10px}body.is-playing .pick-grid{gap:4px}body.is-playing .game-title{font-size:20px}}
   /* Fill selection frames independently of the portrait's intrinsic dimensions. */
   body.is-playing .pick-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center 25%}
+
+  /* Reliability fix: never keep contestant portraits/names hidden while waiting for image load events. */
+  body.is-playing .pick-photo img {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+  body.is-playing .pick-name {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 </style>
 </head>
 <body>
