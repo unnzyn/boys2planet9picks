@@ -1,0 +1,1302 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#081a3d">
+<title>BOYS II PLANET · 9 PICKS</title>
+<style>
+  :root{--ink:#f8f5ff;--muted:#aaa4bd;--bg:#100d20;--panel:#19152a;--line:rgba(255,255,255,.12);--pink:#ff5fa2;--cyan:#68e4ff;--lime:#d9ff76;--violet:#9e79ff}
+  *{box-sizing:border-box} body{margin:0;min-height:100vh;color:var(--ink);font-family:Inter,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:radial-gradient(ellipse at 50% -10%,#44245b 0,transparent 42%),radial-gradient(ellipse at 100% 65%,rgba(45,111,143,.16),transparent 38%),var(--bg);}
+  body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.27;background-image:radial-gradient(#fff 0.65px,transparent .65px);background-size:37px 37px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+  .wrap{position:relative;width:min(100% - 36px,1040px);margin:auto;padding:12px 0 52px}
+  header{display:flex;align-items:center;justify-content:space-between;margin-bottom:46px}.brand{display:flex;align-items:center;gap:12px;font-size:14px;letter-spacing:.18em;font-weight:800}.brand-mark{width:35px;height:35px;display:grid;place-items:center;border:1px solid #ffffff55;border-radius:50%;color:var(--lime);font-size:17px;box-shadow:0 0 22px #d9ff7633}.tag{font-size:12px;letter-spacing:.15em;color:#d5c9f2;border:1px solid #ffffff24;border-radius:99px;padding:8px 12px;background:#ffffff08}
+  .hero{text-align:center;margin:0 auto 22px;max-width:860px}.hero-logo-frame{position:relative;margin:0 auto -30px;width:min(100%,560px);aspect-ratio:16/9;display:grid;place-items:center}.hero-logo-frame:before{content:"";position:absolute;inset:22% 18%;border-radius:50%;background:radial-gradient(circle,#ffffff30 0,#68e4ff1c 34%,transparent 70%);filter:blur(16px)}.hero-logo{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block;opacity:.96;transform:translateY(18px) scale(1.08);filter:drop-shadow(0 0 13px #eefcff72) drop-shadow(0 0 27px #68e4ff36);-webkit-mask-image:radial-gradient(ellipse at 50% 55%,#000 0 48%,rgba(0,0,0,.94) 58%,rgba(0,0,0,.35) 70%,transparent 82%);mask-image:radial-gradient(ellipse at 50% 55%,#000 0 48%,rgba(0,0,0,.94) 58%,rgba(0,0,0,.35) 70%,transparent 82%)}.eyebrow{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--cyan);font-weight:800;font-size:13px;letter-spacing:.28em}.eyebrow:before,.eyebrow:after{content:"";width:30px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan))}.eyebrow:after{transform:rotate(180deg)}
+  h1{position:relative;z-index:2;margin:0 0 16px;line-height:1;text-transform:uppercase}.title-main{display:block;font-family:"Eurostile","Bank Gothic","Arial Narrow","Arial Black",Arial,sans-serif;font-size:clamp(54px,11vw,76px);font-weight:650;letter-spacing:.10em;transform:scaleY(.76);background:linear-gradient(180deg,#ffffff 0%,#bfc8cf 22%,#f7fbff 35%,#7b858f 48%,#ffffff 58%,#a5afb7 74%,#eef5f8 100%);color:transparent;background-clip:text;-webkit-background-clip:text;-webkit-text-stroke:.55px #ffffff4d;text-shadow:0 1px 0 #ffffffbf,0 0 9px #eefcff5f,0 0 20px #9fb6c63d,0 9px 24px #000}.title-sub{display:none}.subtitle{font-size:17px;color:#d4cfe0;line-height:1.8;margin:0}.subtitle b{color:var(--lime);font-weight:800}
+  .progress{width:min(100%,450px);margin:26px auto 0;text-align:left}.progress-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px;color:#c9c2d5;font-size:12px;letter-spacing:.13em}.progress-label strong{color:var(--cyan);font-size:14px;letter-spacing:0}.progress-track{height:8px;border-radius:99px;overflow:hidden;background:#ffffff16;border:1px solid #ffffff12;box-shadow:inset 0 1px 3px #0006}.progress-fill{width:0%;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));box-shadow:0 0 14px #68e4ff66;transition:width .3s ease}
+  .setup{max-width:800px;margin:auto;padding:clamp(22px,5vw,42px);background:transparent;border:0;border-radius:25px;box-shadow:none;backdrop-filter:none}
+  .section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:19px}.section-title{margin:0;font-size:19px;letter-spacing:.01em}.section-hint{color:var(--muted);font-size:14px;margin:6px 0 0}.section-index{font-size:12px;color:#8f87a5;letter-spacing:.16em;padding-top:4px;white-space:nowrap}
+  .choices{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.choice{position:relative;cursor:pointer;min-height:77px;border:1px solid var(--line);border-radius:15px;background:#ffffff04;padding:15px 17px;display:flex;align-items:center;gap:12px;transition:.18s ease}.choice:hover{border-color:#ffffff45;background:#ffffff09;transform:translateY(-1px)}.choice input{position:absolute;opacity:0;pointer-events:none}.radio{width:19px;height:19px;flex:0 0 19px;border:1px solid #ffffff54;border-radius:50%;display:grid;place-items:center}.radio:after{content:"";width:9px;height:9px;border-radius:50%;background:transparent;transition:.15s}.choice input:checked+.radio{border-color:var(--pink);box-shadow:0 0 0 4px #ff5fa21c}.choice input:checked+.radio:after{background:var(--pink)}.choice.is-checked{border-color:rgba(255,116,187,.30);background:rgba(255,72,164,.045);box-shadow:inset 0 0 30px rgba(255,70,160,.025),0 0 20px rgba(255,70,160,.035)}.choice-copy{display:flex;flex-direction:column;gap:4px}.choice-title{font-size:16px;font-weight:800}.choice-count{display:block;color:#d4cfe0;font-size:14px;font-weight:500;margin-top:7px;opacity:.55;letter-spacing:.03em}.choice-note{font-size:13px;color:var(--muted)}.choice .mini{margin-left:auto;color:#89839a;font-size:12px;letter-spacing:.08em}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,#ffffff18 10%,#ffffff18 90%,transparent);margin:28px 0}.rounds{grid-template-columns:repeat(5,1fr)}.rounds .choice{min-height:104px;padding:18px 56px 17px 17px;align-items:flex-start;flex-direction:column;justify-content:center;gap:10px}.rounds .radio{width:17px;height:17px;flex-basis:17px;position:absolute;right:16px;top:18px}.rounds .choice-title{font-size:17px}.rounds .choice-note{font-size:12px}.rounds .choice:first-child{grid-column:span 5;min-height:96px;flex-direction:row;align-items:center;padding:18px 56px 18px 22px}.rounds .choice:first-child .radio{position:absolute;right:18px;top:50%;transform:translateY(-50%)}.rounds .choice:first-child .choice-copy{flex-direction:column;align-items:flex-start;gap:0}.rounds .choice:first-child .choice-note{margin-top:1px}
+  .bottom{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:16px}.selection-note{font-size:13px;color:var(--muted);line-height:1.6}.selection-note strong{color:#e9e1f5}.start{border:0;border-radius:13px;padding:13px 26px;min-width:230px;color:#1c1022;background:linear-gradient(105deg,#ff78ad,#ffc0cf 52%,#a4f1ff);font-weight:950;letter-spacing:.04em;font-size:16px;cursor:pointer;box-shadow:0 9px 28px #ff5fa235;transition:.18s;display:flex;flex-direction:column;align-items:center;gap:2px}.start:hover{transform:translateY(-2px);box-shadow:0 12px 32px #ff5fa255}.start:active{transform:translateY(0)}.start-sub{font-size:10px;font-weight:800;letter-spacing:.24em;opacity:.68}.arrow{font-size:20px;margin-left:12px}
+  .screen.result-screen{max-width:820px;min-height:0;padding:12px 0 0;background:transparent;border:0;border-radius:0;box-shadow:none}
+  .photo-booth{position:relative;overflow:hidden;padding:clamp(14px,4vw,34px);border:1px solid #d8d0ffb8;background:radial-gradient(ellipse at 50% 18%,#907df2 0,#6753cb 32%,#49358f 72%,#38286f 100%);box-shadow:0 18px 60px #0008,inset 0 0 0 7px #ffffff12,inset 0 0 70px #1e0f5880;color:#fff}
+  .photo-booth:before,.photo-booth:after{content:"";position:absolute;pointer-events:none;border:1px solid #e3ddff72;border-radius:50%;width:120%;height:92%;left:-10%;top:13%;box-shadow:0 0 0 18px #ffffff08,0 0 0 42px #ffffff06}
+  .photo-booth:after{width:calc(100% - 28px);height:calc(100% - 28px);left:14px;top:14px;border-radius:0;box-shadow:none;border-color:#eeeaff42}
+  .booth-top,.booth-grid,.booth-caption{position:relative;z-index:1}
+  .booth-top{display:flex;align-items:center;gap:10px;margin:0 auto clamp(12px,3vw,22px);max-width:740px}
+  .booth-brand{flex:1;text-align:center;padding:9px 12px 10px;border:1px solid #f5f2ffde;outline:1px solid #f5f2ff48;outline-offset:4px;background:#a99cea35;font-family:"Eurostile","Bank Gothic","Arial Narrow",Arial,sans-serif;font-size:clamp(17px,5vw,35px);font-weight:900;letter-spacing:.055em;line-height:1.1;text-shadow:0 1px 0 #fff8,0 3px 12px #211454}
+  .booth-stars{flex:0 0 auto;color:#f3eeff;font-size:clamp(10px,2.5vw,16px);letter-spacing:.24em;white-space:nowrap}
+  .booth-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(5px,1.4vw,10px);max-width:740px;margin:auto;padding:clamp(5px,1vw,8px);border:1px solid #fff9;background:#26175c5c;box-shadow:0 10px 28px #1b0d4a6b}
+  .booth-cell{position:relative;overflow:hidden;aspect-ratio:1/1;min-width:0;background:linear-gradient(145deg,#d7d0ff,#8584c5 55%,#433d88);border:1px solid #f5f1ffbd;box-shadow:inset 0 0 0 3px #ffffff16}
+  .booth-cell img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 38%;filter:saturate(.92)}
+  .booth-placeholder{display:grid;place-items:center;width:100%;height:100%;background:radial-gradient(circle at 50% 30%,#e8dfff,#8785c3 57%,#45417e);color:#eeeaff;font-size:clamp(11px,2vw,18px);font-weight:700;letter-spacing:.08em}
+  .booth-rank{position:absolute;left:6px;top:6px;min-width:25px;padding:3px 6px;border:1px solid #fff9;background:#382776c9;color:#fff;font-size:clamp(11px,2.5vw,16px);font-weight:900;text-align:center;text-shadow:0 1px 4px #17102d}
+  .booth-name{position:absolute;right:0;bottom:0;left:0;padding:8px 5px 6px;background:linear-gradient(0deg,#150c2ceb,#21134ca8 75%,transparent);font-size:clamp(11px,3vw,18px);font-weight:850;line-height:1.2;text-align:center;text-shadow:0 1px 5px #000;overflow-wrap:anywhere}
+  .booth-caption{margin:clamp(10px,2.5vw,18px) auto 0;text-align:center;color:#eeeaffd9;font-size:clamp(9px,2.5vw,13px);letter-spacing:.16em}
+  .result-screen .game-actions{margin:15px 4px 0}
+  .result-screen .credit{margin:12px 0 14px}
+  .credit{text-align:center;color:#b9b2c8;font-size:11px;font-weight:300;letter-spacing:.04em;opacity:.32;margin:18px 0 0}.foot{text-align:center;color:#777287;font-size:12px;letter-spacing:.08em;margin:24px 0 0}.foot b{color:#b7afc8;font-weight:700}
+  .screen{max-width:920px;margin:auto;min-height:390px;padding:clamp(24px,5vw,42px);display:flex;flex-direction:column;background:linear-gradient(145deg,#211a35ed,#171426f2);border:1px solid #ffffff17;border-radius:25px;box-shadow:0 24px 75px #0007}.screen[hidden]{display:none}.setup[hidden]{display:none}.game-view{width:100%}.game-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:22px}.game-kicker{color:var(--cyan);font-size:15px;font-weight:850;letter-spacing:.18em;margin-bottom:8px}.game-title{font-size:30px;line-height:1.25;margin:0}.game-subtitle{color:#c4bdd1;line-height:1.7;font-size:18px;margin:8px 0 0}.game-count{white-space:nowrap;border:1px solid #ffffff24;border-radius:99px;background:#ffffff08;padding:10px 14px;color:#e8e2f0;font-size:15px}.pick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.pick-grid.nine-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.pick-grid.pk-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:660px;margin:auto}.pick-card{position:relative;min-height:188px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(155deg,#ffffff0b,#ffffff04);padding:12px;display:flex;flex-direction:column;gap:10px;color:var(--ink);font:inherit;text-align:left;cursor:pointer;transition:.18s ease;overflow:hidden}.nine-grid .pick-card{min-height:154px}.pk-grid .pick-card{min-height:240px}.pick-card:hover{transform:translateY(-2px);border-color:#ffffff42}.pick-card.selected{border-color:#ff75ad;background:linear-gradient(150deg,#ff5fa22b,#9e79ff17);box-shadow:0 0 0 1px #ff5fa23a,0 13px 34px #ff5fa21d}.pick-photo{height:116px;border-radius:13px;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#e6d8ff,#b7f1ff);color:#3e3157;font-size:15px;font-weight:900}.nine-grid .pick-photo{height:86px}.pk-grid .pick-photo{height:160px}.pick-photo img{width:100%;height:100%;object-fit:cover}.pick-id{color:#8d86a1;font-size:14px;font-weight:850}.pick-name{font-size:20px;font-weight:950;line-height:1.25}.nine-grid .pick-name{font-size:17px}.pick-mark{display:none}.game-actions{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:22px}.pick-status{color:#c4bdd1;font-size:17px}.next,.back{border-radius:12px;padding:12px 18px;cursor:pointer;font:inherit;font-size:16px;font-weight:850}.next{border:0;color:#1c1022;background:linear-gradient(105deg,#ff78ad,#ffc0cf 52%,#a4f1ff);box-shadow:0 9px 28px #ff5fa235}.next:disabled{cursor:not-allowed;opacity:.45;box-shadow:none}.back{color:#ded5ea;background:transparent;border:1px solid #ffffff35}.back:hover{border-color:#fff}.restart-fixed{position:fixed;left:14px;bottom:14px;z-index:5;border:1px solid #ffffff35;border-radius:999px;padding:11px 15px;background:#171426e8;color:#ded5ea;font:inherit;font-size:14px;font-weight:850;box-shadow:0 10px 26px #0007;cursor:pointer}.restart-fixed:hover{border-color:#fff}.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:9px;margin:22px 0}.result-chip{border:1px solid #ffffff24;background:#ffffff08;padding:10px 12px;border-radius:12px;font-size:16px;color:#e8e2f0}.empty-state{text-align:center;padding:34px 0}.empty-state h2{font-size:29px;margin:0 0 10px}.empty-state p{color:#c4bdd1;line-height:1.8;font-size:18px}
+  @media(max-width:900px){.wrap{width:min(100% - 24px,1040px);padding-top:8px}header{display:none}.hero{margin-bottom:18px}.hero-logo-frame{width:min(100%,420px);margin-bottom:-24px}.hero-logo{transform:translateY(14px) scale(1.08)}h1{margin-top:0}.title-main{font-size:clamp(50px,15vw,72px);letter-spacing:.095em}.subtitle{display:none}.setup,.screen{border-radius:20px}.choices{grid-template-columns:1fr}.choice{min-height:64px}.rounds{grid-template-columns:repeat(2,1fr)}.rounds .choice:first-child{grid-column:span 2}.rounds .choice{min-height:104px;padding-right:42px}.rounds .choice-title{font-size:clamp(12px,4vw,17px)}.bottom{align-items:stretch;flex-direction:column}.start{width:100%}.selection-note{text-align:center}.game-head,.game-actions{flex-direction:column;align-items:stretch}.game-count{width:max-content}.pick-grid{grid-template-columns:repeat(2,1fr);gap:10px}.pick-grid.nine-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.pick-card{min-height:166px}.nine-grid .pick-card{min-height:132px;padding:8px}.pick-photo{height:96px}.nine-grid .pick-photo{height:72px}.pick-name{font-size:18px}.nine-grid .pick-name{font-size:15px}.restart-fixed{left:10px;bottom:10px}.screen.result-screen{padding-top:4px}.photo-booth{padding:12px 10px}.booth-grid{gap:5px;padding:5px}.booth-rank{left:4px;top:4px;min-width:22px;padding:2px 4px}.booth-name{padding:7px 3px 5px}.result-screen .game-actions{flex-direction:row;align-items:center}.result-screen .game-actions .next,.result-screen .game-actions .back{flex:1;padding:11px 8px}}
+  @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+  .choice,.setup,.screen,.pick-card,.pick-photo,.start,.next,.back,.restart-fixed,.result-chip,.game-count,.progress-track,.progress-fill,.booth-grid,.booth-cell,.booth-brand{border-radius:0}
+
+  :root{--ink:#f1f5ff;--muted:#aab9d6;--bg:#08152f;--panel:#0d1c3a;--line:rgba(203,220,255,.2);--pink:#adcaff;--cyan:#b9dcff;--lime:#edf4ff;--violet:#7796dd}
+  body{font-family:"新細明體","PMingLiU","MingLiU","Songti TC","Songti SC","STSong","Noto Serif CJK TC",serif;background:radial-gradient(ellipse at 17% 11%,rgba(54,112,194,.48),transparent 38%),radial-gradient(ellipse at 82% 26%,rgba(61,83,171,.34),transparent 39%),radial-gradient(ellipse at 50% 100%,rgba(18,59,116,.3),transparent 44%),linear-gradient(165deg,#081a3c 0%,#07132d 58%,#0b1732 100%);}
+  body:before{opacity:.2;background-image:radial-gradient(#e8f2ff .7px,transparent .7px),radial-gradient(#a8cdfb .6px,transparent .6px);background-size:47px 47px,71px 71px;background-position:0 0,20px 27px;mask-image:linear-gradient(to bottom,black,transparent 96%)}
+  body:after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.35;background:radial-gradient(ellipse at 21% 35%,rgba(91,177,255,.17),transparent 25%),linear-gradient(58deg,transparent 18%,rgba(109,183,255,.12) 18.15%,transparent 18.7%),linear-gradient(64deg,transparent 23%,rgba(127,189,255,.07) 23.1%,transparent 23.5%)}
+  .wrap{z-index:1}
+  .title-main{font-family:"Snell Roundhand","Apple Chancery","Segoe Script","Brush Script MT",cursive;font-size:clamp(48px,12vw,82px);font-style:italic;font-weight:400;letter-spacing:.06em;transform:none;background:linear-gradient(180deg,#fff 0%,#cfddf5 48%,#eff5ff 100%);color:transparent;background-clip:text;-webkit-background-clip:text;-webkit-text-stroke:.35px #eaf3ff60;text-shadow:0 1px 0 #ffffff91,0 0 14px #a8caff4f,0 9px 25px #0008;text-transform:none}
+  .title-sub{display:block;margin-top:6px;color:#dfeaff;font-family:"Snell Roundhand","Apple Chancery","Segoe Script","Brush Script MT",cursive;font-size:clamp(22px,5vw,34px);font-style:italic;font-weight:400;letter-spacing:.04em;text-transform:none;text-shadow:0 0 14px #b6d4ff74}
+  .hero-logo-frame:before{background:radial-gradient(circle,#d4e7ff3d 0,#70aaff20 34%,transparent 72%)}
+  .hero-logo{filter:drop-shadow(0 0 13px #d9eaff8c) drop-shadow(0 0 30px #5fa8ff55)}
+  .eyebrow{font-family:"Snell Roundhand","Apple Chancery","Segoe Script","Brush Script MT",cursive;color:#dceaff;font-style:italic;font-weight:400;letter-spacing:.12em}
+  .choice{border-color:#d7e5ff25;background:linear-gradient(115deg,#ffffff08,#8abaff08);}
+  .choice:hover{border-color:#c8dcff70;background:#8abaff12}
+  .choice.is-checked{border-color:#a9ccff78;background:linear-gradient(110deg,#9fc9ff15,#ffffff06);box-shadow:inset 0 0 26px #8abaff0d,0 0 22px #72a9ff18}
+  .radio{border-color:#cbdcff80}.choice input:checked+.radio{border-color:#c5ddff;box-shadow:0 0 0 4px #8dbaff20}.choice input:checked+.radio:after{background:#d9eaff}
+  .start{position:relative;display:block;width:auto;min-width:0;align-self:center;margin:12px 0 2px;padding:10px 18px;border:0;background:transparent;color:#f0f5ff;font-family:"新細明體","PMingLiU","MingLiU","Songti TC","Songti SC","STSong","Noto Serif CJK TC",serif;font-size:clamp(20px,5vw,28px);font-weight:400;letter-spacing:.27em;line-height:1.35;white-space:nowrap;box-shadow:none;text-shadow:0 0 9px #e4efff7d,0 0 22px #87b7ff4d;transition:color .2s,text-shadow .2s}
+  .start:before,.start:after{content:"";position:absolute;top:50%;width:clamp(56px,15vw,144px);height:1px;pointer-events:none}
+  .start:before{right:calc(100% + 9px);background:linear-gradient(90deg,transparent,#e5efff2d 16%,#dceaffc9 100%);box-shadow:0 0 8px #8dbaff5c}
+  .start:after{left:calc(100% + 9px);background:linear-gradient(90deg,#dceaffc9 0%,#e5efff2d 84%,transparent);box-shadow:0 0 8px #8dbaff5c}
+  .start:hover{transform:none;color:#fff;box-shadow:none;text-shadow:0 0 12px #fff,0 0 27px #8dbaff9c}
+  .start:active{transform:translateY(1px)}
+  .start-label{display:block}
+  .bottom{margin-top:24px}
+  .start-sub,.brand,.tag,.booth-caption{font-family:"Snell Roundhand","Apple Chancery","Segoe Script","Brush Script MT",cursive;font-style:italic;font-weight:400}
+  .screen{background:linear-gradient(155deg,#102449f2,#0b1832f5);border-color:#d9e8ff27;box-shadow:0 24px 75px #0009}
+  .game-kicker,.game-title,.game-subtitle,.game-count,.pick-status,.choice-title,.choice-count,.section-title,.section-hint,.section-index,.selection-note,.back,.next,.restart-fixed,.pick-name,.booth-name,.result-chip,.empty-state h2,.empty-state p{font-family:"新細明體","PMingLiU","MingLiU","Songti TC","Songti SC","STSong","Noto Serif CJK TC",serif;font-weight:400}
+  .game-kicker{color:#bed8ff;letter-spacing:.14em}
+  .game-title{color:#f1f5ff;font-size:clamp(25px,5vw,32px);letter-spacing:.1em}
+  .game-subtitle,.section-hint,.selection-note,.pick-status{color:#b8c7e1}
+  .game-count{border-color:#c3d8ff35;background:#d9eaff09;color:#e5eeff}
+  .pick-card{border-color:#d9e8ff2b;background:linear-gradient(155deg,#c5dcff12,#ffffff04);color:var(--ink)}
+  .pick-card:hover{border-color:#d9e8ff78}
+  .pick-card.selected{border-color:#c6deff;background:linear-gradient(150deg,#a9ccff2b,#7796dd20);box-shadow:0 0 0 1px #b7d5ff40,0 13px 34px #679bdf20}
+  .pick-photo{background:linear-gradient(145deg,#dbeaff,#91b8e6);color:#1c3154}
+  .pick-name{color:#f2f6ff}
+  .progress-label,.progress-label strong{color:#dce9ff}
+  .progress-track{background:#d9eaff16;border-color:#e2edff28;box-shadow:inset 0 1px 3px #0007}
+  .progress-fill{background:linear-gradient(90deg,#7796dd,#b9dcff,#f2f7ff);box-shadow:0 0 14px #9ccaff79}
+  .next{color:#f2f6ff;background:linear-gradient(110deg,#4668a7,#7799d5 53%,#b8d4f5);box-shadow:0 8px 24px #4d7bbd40}
+  .back{color:#e1eaff;background:#dceaff08;border-color:#d9e8ff4a}
+  .back:hover{border-color:#f1f6ff}
+  .restart-fixed{background:#0a1935e8;color:#e1eaff;border-color:#d9e8ff50;box-shadow:0 10px 26px #0009}
+  .photo-booth{border-color:#d8e4ffb8;background:radial-gradient(ellipse at 50% 18%,#4d78c4 0,#274b8d 36%,#172f68 76%,#102351 100%);box-shadow:0 18px 60px #0009,inset 0 0 0 7px #ffffff12,inset 0 0 70px #071a4380}
+  .photo-booth:before,.photo-booth:after{border-color:#e3ecff72}
+  .booth-brand{font-family:"Snell Roundhand","Apple Chancery","Segoe Script","Brush Script MT",cursive;font-style:italic;font-weight:400;background:#c3d9ff25;border-color:#f5f7ffde}
+  .booth-grid{border-color:#eff5ff;background:#12295580}
+  .booth-cell{background:linear-gradient(145deg,#d7e5ff,#8ba9da 55%,#334f91);border-color:#f5f7ffbd}
+  .booth-placeholder{background:radial-gradient(circle at 50% 30%,#e7efff,#829cc9 57%,#334b83);color:#f2f6ff}
+  .booth-rank{background:#1b376fc9;border-color:#fff9}
+  .booth-name{background:linear-gradient(0deg,#07142ceb,#102858b0 75%,transparent)}
+  .booth-caption{color:#edf3ffed}
+  .pick-id,.credit-en{font-family:"Snell Roundhand","Apple Chancery","Segoe Script","Brush Script MT",cursive;font-style:italic;font-weight:400}
+  .credit{color:#d5e2fa;opacity:.48;font-family:"Songti SC","STSong","SimSun","Noto Serif CJK TC",serif;font-weight:300}
+  .tag{border-radius:0;color:#dceaff;border-color:#d6e5ff38;background:#dceaff08}
+  .title-main,.title-sub{opacity:.98}
+  @media(max-width:900px){.start{width:auto;min-width:0;align-self:center}.start:before,.start:after{width:clamp(46px,14vw,100px)}.bottom{margin-top:22px}}
+
+  /* A continuous inset frame follows the full page through every game stage. */
+  .wrap{width:min(100% - 30px,1040px);padding:16px 0 24px}
+  .wrap main{display:flex;flex-direction:column;min-height:calc(100svh - 40px);padding:clamp(18px,3vw,34px) clamp(10px,3vw,28px) 16px;border:1px solid rgba(208,226,248,.52);box-shadow:inset 0 0 0 4px #091831,inset 0 0 0 5px rgba(208,226,248,.28);background:rgba(8,17,35,.12)}
+  .setup{width:100%;flex:1;display:flex;flex-direction:column;margin:0 auto}.setup .credit{margin-top:auto;padding-top:24px}
+  .screen:not([hidden]){width:100%;flex:1;margin:0 auto}.result-screen .game-view{display:flex;flex:1;flex-direction:column}.result-screen .credit{margin-top:auto;padding-top:24px;margin-bottom:0}
+  @media(max-width:900px){.wrap{width:calc(100% - 28px);padding-top:14px}.wrap main{min-height:calc(100svh - 28px);padding:18px 10px 16px}}
+
+  /* Keep controls in the same places when a phone or tablet rotates. */
+  .hero{width:min(100%,620px)}
+  .hero-logo-frame{width:min(100%,420px)}
+  .setup{max-width:620px;padding:clamp(16px,3vw,28px) clamp(10px,3vw,26px) 8px}
+  .rounds{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rounds .choice:first-child{grid-column:span 2}
+  .rounds .choice{min-height:104px;padding-right:42px}
+  .rounds .choice-title{font-size:clamp(14px,3.6vw,17px)}
+  .start{width:auto;min-width:0;align-self:center}
+  .start:before,.start:after{width:64px}
+  .restart-fixed{left:max(10px,calc((100vw - 1040px)/2 + 18px));bottom:14px}
+
+  /* Home choices echo the stacked translucent notifications in the reference. */
+  .setup{max-width:580px}
+  .rounds{grid-template-columns:minmax(0,1fr);gap:10px}
+  .rounds .choice,.rounds .choice:first-child{grid-column:auto;min-height:78px;padding:11px 52px 11px 12px;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:12px;border-radius:24px;border:1px solid rgba(245,249,255,.27);background:linear-gradient(120deg,rgba(141,148,163,.30),rgba(67,75,91,.36) 48%,rgba(103,112,129,.25));-webkit-backdrop-filter:blur(28px) saturate(160%);backdrop-filter:blur(28px) saturate(160%);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 -1px 0 rgba(255,255,255,.06),0 10px 25px rgba(0,0,0,.28)}
+  .rounds .choice:hover{background:linear-gradient(120deg,rgba(158,166,181,.34),rgba(84,99,121,.38) 55%,rgba(116,129,151,.28));border-color:rgba(255,255,255,.42)}
+  .rounds .choice.is-checked{border-color:rgba(238,247,255,.68);background:linear-gradient(120deg,rgba(166,181,208,.38),rgba(89,111,146,.41) 55%,rgba(130,148,180,.31));box-shadow:inset 0 1px 0 rgba(255,255,255,.36),inset 0 0 24px rgba(205,225,255,.08),0 10px 28px rgba(0,0,0,.32)}
+  .choice-icon{flex:0 0 42px;width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.34);border-radius:12px;background:linear-gradient(145deg,rgba(202,220,255,.72),rgba(68,99,161,.54) 60%,rgba(39,67,125,.68));color:white;font-family:"Snell Roundhand","Apple Chancery","Segoe Script",cursive;font-size:24px;font-style:italic;text-shadow:0 1px 7px #102b69b8;box-shadow:inset 0 1px 0 #ffffff8a,0 2px 7px #07152d80}
+  .choice-copy{min-width:0}.rounds .choice:first-child .choice-copy{display:flex;flex-direction:column;align-items:flex-start;gap:0}
+  .rounds .choice-title{font-size:clamp(16px,3.6vw,19px);line-height:1.2;white-space:nowrap}.rounds .choice-count{font-size:13px;margin-top:5px;opacity:.74;color:#f0f5ff}
+  .rounds .radio,.rounds .choice:first-child .radio{position:absolute;right:17px;top:50%;transform:translateY(-50%);width:19px;height:19px;flex-basis:19px}
+  .bottom{margin-top:20px}
+
+  /* Lock screen glass treatment. */
+  .wrap main{position:relative;border-radius:clamp(26px,4vw,42px);border:1px solid rgba(232,241,255,.32);background:linear-gradient(135deg,rgba(126,157,199,.15),rgba(22,34,61,.30) 32%,rgba(12,22,45,.32) 76%,rgba(159,183,215,.10));-webkit-backdrop-filter:blur(34px) saturate(155%);backdrop-filter:blur(34px) saturate(155%);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 1px 0 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(255,255,255,.18),0 20px 60px rgba(0,0,0,.32)}
+  .wrap main:before{content:"";position:absolute;left:22px;right:22px;top:4px;height:1px;border-radius:50%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);pointer-events:none}
+  .hero{margin-bottom:10px}.lock-date{color:#f5f8ff;font-size:clamp(16px,3vw,22px);letter-spacing:.14em;text-shadow:0 1px 8px #06152bba}.lock-time{font-family:"New York","Times New Roman",serif;font-size:clamp(66px,12vw,108px);font-weight:200;line-height:1.04;letter-spacing:-.035em;color:#f2f6ffde;text-shadow:0 2px 13px #08162b8c}
+  .hero-logo-frame{width:min(100%,260px);margin:-10px auto -30px}
+  .rounds .choice,.rounds .choice:first-child{position:relative;overflow:hidden;-webkit-backdrop-filter:blur(38px) saturate(180%);backdrop-filter:blur(38px) saturate(180%);border-color:rgba(255,255,255,.31);box-shadow:inset 0 1px 0 rgba(255,255,255,.42),inset 0 0 0 1px rgba(255,255,255,.07),0 12px 28px rgba(0,0,0,.26)}
+  .rounds .choice:before{content:"";position:absolute;inset:0 0 47%;border-radius:24px 24px 50% 50%;background:linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,.02) 70%,transparent);pointer-events:none}
+  .rounds .choice-icon,.rounds .choice-copy,.rounds .radio{z-index:1}
+  .setup .credit{margin-top:auto;margin-bottom:8px;padding-top:18px}
+  .setup .bottom{margin:0;align-items:center}
+  .swipe-start{display:flex;flex-direction:column;align-items:center;gap:12px;width:100%;padding:10px 0 2px;touch-action:none;color:#f4f8ff;cursor:pointer}
+  .swipe-start:before,.swipe-start:after{display:none}
+  .swipe-hint{font-size:14px;font-weight:400;letter-spacing:.13em;opacity:.82}
+  .home-indicator{display:block;width:clamp(112px,26vw,170px);height:5px;border-radius:99px;background:#fff;box-shadow:0 0 9px #ffffff80,0 1px 2px #0007}
+  .swipe-start:hover .home-indicator,.swipe-start:focus-visible .home-indicator{box-shadow:0 0 17px #fff,0 0 30px #b5d6ffb8}
+  @media(max-width:900px){.hero-logo-frame{width:min(100%,260px);margin:-10px auto -30px}.setup .bottom{margin:0}}
+
+  /* Give the date the same breathing room as the lock-screen reference. */
+  .hero{padding-top:clamp(58px,7vh,82px)}
+  .mock-status{position:absolute;z-index:3;top:17px;right:clamp(20px,3vw,32px);display:flex;align-items:center;gap:7px;color:#f6f8ff;font-family:Arial,sans-serif;font-size:13px;line-height:1;text-shadow:0 1px 6px #0008}
+  .status-wifi{width:19px;height:15px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-width:2}
+  .status-moon{font-size:17px;line-height:12px}.status-battery{position:relative;width:25px;height:12px;padding:2px;border:1.4px solid currentColor;border-radius:3px}
+  .status-battery:before{content:"";display:block;width:34%;height:100%;border-radius:1px;background:currentColor}.status-battery:after{content:"";position:absolute;right:-4px;top:3px;width:2px;height:4px;border-radius:0 2px 2px 0;background:currentColor}
+  body.is-playing .lock-date,body.is-playing .lock-time{display:none}
+  body.is-playing .hero{padding-top:30px;margin-bottom:20px}
+  body.is-playing .hero-logo-frame{width:min(100%,230px);margin:-12px auto -28px}
+  body.is-playing .progress{margin:8px auto 0}
+  body.is-playing .screen{border:1px solid rgba(235,244,255,.32);border-radius:clamp(24px,3vw,34px);background:linear-gradient(130deg,rgba(135,156,186,.18),rgba(24,34,54,.72) 34%,rgba(18,29,51,.75));-webkit-backdrop-filter:blur(30px) saturate(155%);backdrop-filter:blur(30px) saturate(155%);box-shadow:inset 0 1px 0 rgba(255,255,255,.29),inset 1px 0 0 rgba(255,255,255,.09),0 20px 55px #0007}
+  body.is-playing .screen:not([hidden]):before{content:"";align-self:center;flex:0 0 auto;width:54px;height:5px;margin:-10px auto 20px;border-radius:99px;background:rgba(245,249,255,.48);box-shadow:inset 0 1px 0 #fff7,0 1px 8px #0003}
+  @media(max-width:900px){.hero{padding-top:clamp(54px,7vh,72px)}body.is-playing .hero{padding-top:24px}body.is-playing .screen{padding:20px 14px 24px}}
+
+  /* Stable image boxes, with the portrait's face kept in view. */
+  .pick-photo,.nine-grid .pick-photo,.pk-grid .pick-photo{display:flex;align-items:center;justify-content:center;flex:0 0 auto;min-width:0}
+  .pick-photo img{display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:cover;object-position:center 25%}
+  .pick-photo img[data-trim-top],.ranking-image img[data-trim-top]{transform:translateY(-5%) scale(1.12);transform-origin:center center}
+  body.is-playing .screen{position:relative;padding-top:50px}
+  body.is-playing .restart-fixed{position:absolute;top:12px;right:14px;bottom:auto;left:auto;border-radius:8px;padding:5px 8px;font-size:11px;opacity:.62;box-shadow:none}
+  body.is-playing .restart-fixed:hover,body.is-playing .restart-fixed:focus-visible{opacity:1}
+  @media(max-width:900px){body.is-playing .screen{padding-top:48px}}
+
+  /* Final ranking follows the game window's restrained iOS glass style. */
+  body.is-result .progress{display:none}
+  body.is-result .hero{margin-bottom:8px}
+  body.is-result .screen.result-screen{max-width:920px;padding:50px clamp(14px,4vw,32px) 24px;background:linear-gradient(130deg,rgba(135,156,186,.18),rgba(24,34,54,.72) 34%,rgba(18,29,51,.75));border:1px solid rgba(235,244,255,.32);border-radius:clamp(24px,3vw,34px);box-shadow:inset 0 1px 0 rgba(255,255,255,.29),0 20px 55px #0007}
+  .ranking-head{text-align:center;margin:2px 0 20px}.ranking-eyebrow{font-family:"Snell Roundhand","Apple Chancery",cursive;font-style:italic;font-size:20px;color:#cbdaf4}.ranking-head h2{font-size:clamp(24px,5vw,34px);font-weight:400;letter-spacing:.12em;margin:3px 0 0}
+  .ranking-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(7px,1.4vw,12px);max-width:740px;margin:auto}
+  .ranking-cell{position:relative;min-width:0;overflow:hidden;border:1px solid rgba(235,244,255,.26);border-radius:clamp(12px,2vw,18px);background:rgba(227,237,255,.11);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+  .ranking-cell.first{border-color:rgba(243,248,255,.7);box-shadow:inset 0 1px 0 #fff8,0 0 20px #b9d8ff24}
+  .ranking-image{aspect-ratio:1/1;overflow:hidden;background:linear-gradient(145deg,#d7e5ff,#7899ce);display:grid;place-items:center;color:#17325f;font-size:12px;text-align:center}
+  .ranking-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 25%}
+  .ranking-info{display:flex;align-items:baseline;gap:6px;padding:8px clamp(6px,1.5vw,12px) 10px;min-height:44px}
+  .ranking-number{font:italic 17px "Snell Roundhand","Apple Chancery",cursive;color:#b9d3f8;white-space:nowrap}.ranking-cell.first .ranking-number{color:#fff}
+  .ranking-name{min-width:0;font-size:clamp(11px,2.5vw,17px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .result-screen .game-actions{max-width:740px;margin:18px auto 0;justify-content:flex-start}.result-screen .game-actions .back{padding:7px 11px;font-size:13px;opacity:.72;border-radius:9px}
+  @media(max-width:900px){body.is-result .screen.result-screen{padding:48px 12px 18px}.ranking-head{margin-bottom:15px}.ranking-info{gap:3px;min-height:38px;padding:6px 5px}.ranking-number{font-size:13px}.result-screen .game-actions .back{flex:0 0 auto}}
+
+  /* The home screen stays intact; only the opened app uses system typography. */
+  body.is-playing{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","PingFang TC","PingFang SC","Noto Sans TC",sans-serif}
+  body.is-playing .game-title,body.is-playing .game-head-meta,body.is-playing .pick-name,body.is-playing .back,body.is-playing .restart-fixed,body.is-playing .ranking-name,body.is-playing .ranking-head h2{font-family:inherit;font-style:normal;font-weight:400}
+  body.is-playing .hero{padding-top:18px;margin-bottom:4px}
+  body.is-playing .hero-logo-frame{width:min(100%,190px);margin:-18px auto -31px}
+  body.is-playing .screen,body.is-result .screen.result-screen{position:relative;max-width:960px;min-height:0;padding:68px clamp(14px,3.4vw,34px) 28px;border-radius:clamp(28px,3.5vw,36px);border:1px solid rgba(229,239,255,.32);background:radial-gradient(ellipse at 6% 0%,rgba(211,228,255,.24),transparent 37%),linear-gradient(138deg,rgba(134,168,215,.24),rgba(31,58,103,.22) 38%,rgba(15,31,64,.3) 77%,rgba(153,184,224,.12));-webkit-backdrop-filter:blur(44px) saturate(165%);backdrop-filter:blur(44px) saturate(165%);box-shadow:inset 0 1px 0 rgba(255,255,255,.48),inset 1px 0 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(225,237,255,.1),0 18px 54px rgba(2,10,30,.28),0 4px 16px rgba(2,10,30,.12)}
+  body.is-playing .screen:after{content:"";position:absolute;top:2px;left:9%;right:9%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45) 35%,rgba(255,255,255,.2) 75%,transparent);pointer-events:none}
+  body.is-playing .screen:not([hidden]):before{position:absolute;top:12px;left:50%;width:48px;height:4px;margin:0;transform:translateX(-50%);background:rgba(244,249,255,.48)}
+  body.is-playing .screen .progress{position:absolute;top:43px;left:clamp(24px,5vw,50px);right:clamp(24px,5vw,50px);width:auto;margin:0;z-index:1}
+  body.is-playing .progress-label{display:none}
+  body.is-playing .progress-track{height:2px;border:0;border-radius:99px;background:rgba(222,237,255,.17);box-shadow:inset 0 1px 1px #0003;overflow:hidden}
+  body.is-playing .progress-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,rgba(205,228,255,.62),rgba(244,251,255,.95));box-shadow:0 0 8px rgba(232,245,255,.46)}
+  body.is-playing .restart-fixed{top:11px;right:15px;border:0;border-radius:10px;background:rgba(220,237,255,.09);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);box-shadow:inset 0 1px 0 rgba(255,255,255,.14);color:#f2f7ff;opacity:.52;padding:6px 9px;font-size:11px;transition:opacity .2s,background .2s}
+  body.is-playing .restart-fixed:hover,body.is-playing .restart-fixed:focus-visible{opacity:1;background:rgba(225,238,255,.19)}
+  .game-view{transition:opacity .16s ease,transform .24s cubic-bezier(.2,.8,.25,1);will-change:opacity,transform}
+  .game-view.is-transitioning{opacity:0;transform:translateY(-6px);pointer-events:none}
+  .game-view.is-entering{opacity:0;transform:translateY(8px);pointer-events:none}
+  .game-view.is-choice-locked{pointer-events:none}
+  body.is-playing .game-head{max-width:790px;margin:0 auto 16px;display:flex;flex-direction:row;align-items:baseline;justify-content:space-between;gap:12px}
+  body.is-playing .game-title{font-size:clamp(21px,3vw,27px);line-height:1.25;letter-spacing:.025em;color:#f5f9ff}
+  body.is-playing .game-head-meta{margin-left:auto;display:flex;align-items:baseline;gap:clamp(14px,4vw,36px);color:rgba(236,245,255,.86);font-size:14px;white-space:nowrap}
+  body.is-playing .group-index{color:rgba(224,236,255,.43);font-size:12px}
+  body.is-playing .game-kicker,body.is-playing .game-subtitle,body.is-playing .game-count,body.is-playing .pick-status{display:none}
+  body.is-playing .pick-grid{width:100%;max-width:790px;margin:auto;gap:clamp(5px,1.15vw,11px)}
+  body.is-playing .pick-grid.nine-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  body.is-playing .pick-grid.nine-grid.large-grid{grid-template-columns:repeat(6,minmax(0,1fr));max-width:920px}
+  @media(max-width:900px){body.is-playing .pick-grid.nine-grid.large-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+  @media(max-width:600px){body.is-playing .pick-grid.nine-grid.large-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  body.is-playing .pick-grid.pk-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:790px;gap:clamp(9px,2.4vw,22px)}
+  body.is-playing .pick-card,body.is-playing .nine-grid .pick-card,body.is-playing .pk-grid .pick-card{position:relative;min-width:0;min-height:0;padding:0;gap:0;display:block;border:1px solid rgba(232,243,255,.15);border-radius:clamp(11px,1.7vw,18px);background:rgba(185,213,250,.13);box-shadow:inset 0 1px 0 rgba(255,255,255,.13);overflow:hidden;transform:none;transition:transform .22s cubic-bezier(.2,1.3,.35,1),filter .2s,opacity .2s,box-shadow .22s,border-color .22s}
+  body.is-playing .pick-card:hover{transform:translateY(-1px);border-color:rgba(245,250,255,.4)}
+  body.is-playing .pick-card.selected,body.is-playing .pick-card.is-preferred{transform:scale(1.012);border-color:rgba(246,251,255,.9);background:rgba(185,213,250,.13);box-shadow:inset 0 0 0 1px rgba(255,255,255,.52),0 0 18px rgba(190,224,255,.34);filter:brightness(1.06)}
+  body.is-playing .pick-card.is-muted{opacity:.56}
+  body.is-playing .pick-photo,body.is-playing .nine-grid .pick-photo,body.is-playing .pk-grid .pick-photo{display:grid;width:100%;height:auto;aspect-ratio:4/5;border-radius:0;overflow:hidden;background:linear-gradient(145deg,#b3c9e7,#5876a8);font-size:12px;color:#193257;font-weight:500}
+  body.is-playing .pick-grid.pk-grid .pick-photo{aspect-ratio:4/5}
+  body.is-playing .pick-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 25%}
+  body.is-playing .pick-card:after{content:"";position:absolute;z-index:1;left:0;right:0;bottom:0;height:42%;background:linear-gradient(0deg,rgba(5,16,39,.84),rgba(9,23,47,.28) 55%,transparent);pointer-events:none}
+  body.is-playing .pick-id{display:none}
+  body.is-playing .pick-name,body.is-playing .nine-grid .pick-name{position:absolute;z-index:2;left:6px;right:6px;bottom:clamp(7px,1.4vw,13px);display:block;font-size:clamp(11px,1.65vw,17px);line-height:1.15;color:#fff;text-align:center;text-shadow:0 1px 7px rgba(0,0,0,.6);overflow-wrap:anywhere}
+  body.is-playing .pick-mark{position:absolute;z-index:3;display:grid;place-items:center;right:8px;top:8px;width:25px;height:25px;border-radius:50%;border:1px solid rgba(255,255,255,.68);background:rgba(221,238,255,.55);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:inset 0 1px 0 #fff9,0 2px 8px #001a3d66;color:#153e72;font:700 15px -apple-system,BlinkMacSystemFont,sans-serif;opacity:0;transform:scale(.65);transition:opacity .2s,transform .22s cubic-bezier(.2,1.3,.35,1)}
+  body.is-playing .pick-card.selected .pick-mark,body.is-playing .pick-card.is-preferred .pick-mark{opacity:1;transform:scale(1)}
+  body.is-playing .game-actions{max-width:790px;margin:16px auto 0;display:flex;flex-direction:row;align-items:center;justify-content:flex-start}
+  body.is-playing .game-actions .back{padding:7px 10px;border:0;border-radius:9px;background:rgba(220,237,255,.08);color:rgba(242,248,255,.58);font-size:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.13)}
+  body.is-playing .game-actions .back:hover{color:#fff;background:rgba(220,237,255,.18)}
+  body.is-result .ranking-cell{animation:ranking-arrive .35s both;animation-delay:var(--rank-delay)}
+  @keyframes ranking-arrive{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+  @media(min-width:700px) and (orientation:landscape){body.is-playing .pick-grid.nine-grid{max-width:min(790px,calc(94svh - 197px))}}
+  @media(max-width:600px){body.is-playing .screen,body.is-result .screen.result-screen{padding:61px 11px 18px}body.is-playing .screen .progress{top:39px;left:23px;right:23px}body.is-playing .game-head{margin-bottom:12px}body.is-playing .pick-grid.nine-grid{gap:5px}body.is-playing .pick-grid.pk-grid{gap:9px}body.is-playing .pick-name,body.is-playing .nine-grid .pick-name{font-size:clamp(10px,2.8vw,13px);bottom:7px}body.is-playing .pick-mark{top:5px;right:5px;width:20px;height:20px;font-size:12px}body.is-playing .game-head-meta{gap:12px;font-size:12px}body.is-playing .group-index{font-size:10px}}
+
+  /* Interaction rhythm: quick reveals, tactile taps, and quiet pacing beats. */
+  body.is-playing{-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+  body.is-playing:before{animation:ambient-drift 26s ease-in-out infinite alternate;will-change:transform,opacity}
+  body.is-playing .wrap main:after{animation:glass-glint 22s ease-in-out infinite alternate;will-change:transform,opacity}
+  @keyframes ambient-drift{from{transform:translate3d(-1.5%,0,0) scale(1)}to{transform:translate3d(1.5%,-1%,0) scale(1.025)}}
+  @keyframes glass-glint{from{opacity:.28;transform:translateX(-1%)}to{opacity:.42;transform:translateX(1%)}}
+  .portrait-reveal{opacity:0;transform:translateY(8px) scale(.985);filter:blur(2px);animation:portrait-arrive .34s cubic-bezier(.18,.82,.28,1) both;animation-delay:var(--reveal-delay)}
+  .game-view.is-fast .portrait-reveal{animation-duration:.26s}
+  @keyframes portrait-arrive{to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+  body.is-playing .pick-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(238,247,255,.28),rgba(130,169,220,.13) 52%,rgba(255,255,255,.05));filter:blur(7px);opacity:.9;transition:opacity .24s ease;pointer-events:none}
+  body.is-playing .pick-photo{position:relative}
+  body.is-playing .pick-photo img{opacity:.42;filter:blur(5px);transform:scale(1.02);transition:opacity .25s ease,filter .25s ease,transform .25s cubic-bezier(.2,.85,.25,1)}
+  body.is-playing .photo-ready .pick-photo:before{opacity:0}
+  body.is-playing .photo-ready .pick-photo img{opacity:1;filter:blur(0);transform:scale(1)}
+  body.is-playing .pick-name{opacity:0;transform:translateY(3px);transition:opacity .22s ease,transform .22s ease}
+  body.is-playing .photo-ready .pick-name{opacity:1;transform:translateY(0)}
+  body.is-playing .pick-card.is-pressed{transform:scale(.975)!important;transition-duration:.08s}
+  body.is-playing .pick-card.selected .pick-mark,body.is-playing .pick-card.is-preferred .pick-mark{animation:check-pop .22s cubic-bezier(.17,1.22,.32,1) both}
+  @keyframes check-pop{0%{opacity:0;transform:scale(0)}72%{opacity:1;transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
+  .glass-dots{display:inline-flex;align-items:center;gap:7px;height:16px}
+  .glass-dot{display:block;width:6px;height:6px;border-radius:50%;background:rgba(224,238,255,.26);box-shadow:inset 0 1px 0 rgba(255,255,255,.22);transition:background .18s,box-shadow .18s,transform .18s}
+  .glass-dot.filled{background:rgba(245,250,255,.92);box-shadow:0 0 12px rgba(208,231,255,.5),inset 0 1px 0 #fff;transform:scale(1.08)}
+  .glass-dots.complete .glass-dot{animation:dot-complete .36s ease both}
+  @keyframes dot-complete{50%{box-shadow:0 0 18px rgba(234,246,255,.82),inset 0 1px 0 #fff;transform:scale(1.22)}}
+  body.is-playing .pick-card.is-preferred{filter:brightness(1.08);transform:scale(1.015)}
+  body.is-playing .pick-card.is-muted{opacity:.46;filter:saturate(.8) brightness(.86)}
+  .game-view.is-transitioning{opacity:0;transform:translateY(-8px) scale(.99);transition-duration:.22s}
+  .game-view.is-entering{opacity:0;transform:translateY(10px);transition-duration:.3s}
+  .game-view.is-fast.is-transitioning{transition-duration:.17s}
+  .game-view.is-fast.is-entering{transition-duration:.23s}
+  .milestone{min-height:min(54svh,440px);display:grid;place-items:center;text-align:center}
+  .milestone p{margin:0;color:rgba(246,250,255,.9);font-size:clamp(20px,4vw,31px);font-weight:300;letter-spacing:.08em;text-shadow:0 0 17px rgba(206,229,255,.45);animation:milestone-breathe .72s ease both}
+  @keyframes milestone-breathe{from{opacity:0;filter:blur(5px);transform:translateY(5px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}
+
+  /* Result page: reuse the supplied BOYS II PLANET frame and replace only the inner grid. */
+  body.is-result .screen.result-screen{max-width:min(100%,720px);padding:0;background:transparent;border:0;box-shadow:none;border-radius:0;-webkit-backdrop-filter:none;backdrop-filter:none}
+  body.is-result .screen.result-screen:before,body.is-result .screen.result-screen:after{display:none}
+  .ranking-board{position:relative;width:100%;aspect-ratio:1242/1561;margin:auto;background-image:url("assets/img_001_a45da4b7db06.jpg");background-size:100% 100%;background-repeat:no-repeat;filter:drop-shadow(0 18px 52px rgba(0,0,0,.42));overflow:hidden}
+  .ranking-board{background-size:0 0;outline:1px solid #fff;outline-offset:-1px}
+  .ranking-board:after{content:"";position:absolute;inset:0;z-index:0;background-image:inherit;background-size:100% 100%;background-repeat:no-repeat;filter:grayscale(1) brightness(.8) contrast(5);pointer-events:none}
+  .ranking-board:before{content:"";position:absolute;z-index:1;left:12.5%;right:12.5%;top:12.8%;bottom:3.2%;background:#000;pointer-events:none}
+  .back:disabled{opacity:.3;cursor:default;pointer-events:none}
+  .ranking-board .booth-credit-mask{position:absolute;z-index:3;left:45%;width:10%;bottom:1%;height:2.5%;background:#000;pointer-events:none}
+  .ranking-board .booth-credit{position:absolute;z-index:4;left:0;right:0;bottom:.35%;color:#fff;text-align:center;font:400 clamp(8px,1.5vw,12px) -apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;letter-spacing:.02em;line-height:1;white-space:nowrap;text-shadow:0 1px 2px #000;pointer-events:none}
+  .ranking-grid{position:absolute;z-index:2;left:12.7%;right:12.7%;top:13%;bottom:3.4%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:clamp(5px,1vw,10px);max-width:none;margin:0;padding:0;border:0;background:#000}
+  .ranking-cell{border-radius:0;border:1px solid rgba(255,255,255,.88);background:#000;box-shadow:0 0 0 3px #000;opacity:0;animation:booth-result-arrive .38s cubic-bezier(.18,.82,.28,1) both;animation-delay:calc(280ms + var(--rank-delay))}
+  .ranking-cell.first{border-color:#fff;box-shadow:0 0 0 3px #000,0 0 20px rgba(255,255,255,.22)}
+  .ranking-image{width:100%;height:100%;aspect-ratio:auto;background:#111;color:#fff}
+  .ranking-image img{object-fit:cover;object-position:center 24%;filter:saturate(.95) contrast(1.02)}
+  .ranking-info{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;align-items:baseline;justify-content:center;gap:5px;min-height:0;padding:22px 5px 8px;background:linear-gradient(0deg,rgba(21,12,44,.88),rgba(35,19,76,.42) 66%,transparent);text-align:center}
+  .ranking-number{font:700 clamp(12px,2vw,17px) -apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;color:#fff;letter-spacing:.02em;text-shadow:0 1px 5px #000}
+  .ranking-name{font-size:clamp(11px,2.1vw,17px);font-weight:700;color:#fff;text-shadow:0 1px 6px #000}
+  @keyframes booth-result-arrive{from{opacity:0;transform:translateY(8px) scale(.985);filter:blur(2px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+  body.is-result .result-screen .game-actions{max-width:min(720px,100%);margin:12px auto 0;padding:0 10px;justify-content:flex-start}
+  body.is-result .result-screen .credit{display:none}
+  @media(max-width:600px){body.is-result .screen.result-screen{padding:0;max-width:100%}.ranking-board{width:100%}.ranking-grid{gap:5px}.ranking-info{padding:18px 3px 6px}.ranking-number{font-size:11px}.ranking-name{font-size:clamp(10px,2.8vw,13px)}}
+  @media(prefers-reduced-motion:reduce){.game-view,body.is-playing .pick-card,body.is-playing .pick-mark,body.is-playing .pick-photo img,body.is-playing .pick-name{transition:none!important}.portrait-reveal,.glass-dots.complete .glass-dot,.milestone p,body.is-result .ranking-cell{animation:none!important;opacity:1;transform:none;filter:none}body.is-playing:before,body.is-playing .wrap main:after{animation:none!important}}
+
+  /* Direct-play mode: no lock screen, status bar, setup, or home return. */
+  header,.mock-status,.hero,.setup,.restart-fixed,#startBtn{display:none!important}
+  body.is-playing .wrap{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:clamp(14px,3vw,28px) 0}
+  body.is-playing .wrap main{width:100%}
+  body.is-playing .screen,body.is-result .screen.result-screen{margin:auto}
+  body.is-playing .game-actions:empty{display:none}
+  /* Pure black backdrop; glass surfaces and portraits retain their own material and color. */
+  body.is-playing{background:#000}
+  body.is-playing:before{display:none}
+  body.is-playing .wrap main{filter:none;min-height:0;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+  body.is-playing .wrap main:before,body.is-playing .wrap main:after{display:none;content:none}
+  body.is-playing .screen:not(.result-screen){background:radial-gradient(ellipse at 8% 0%,rgba(255,255,255,.21),transparent 36%),linear-gradient(135deg,rgba(255,255,255,.13),rgba(30,33,42,.24) 40%,rgba(12,14,20,.29) 78%,rgba(255,255,255,.08));-webkit-backdrop-filter:blur(44px) saturate(165%);backdrop-filter:blur(44px) saturate(165%)}
+  body.is-playing .screen .progress{top:33px}
+  body.is-playing .progress-label{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;color:#eee;font:400 12px -apple-system,BlinkMacSystemFont,"PingFang TC",sans-serif;letter-spacing:.06em}
+  body.is-playing .progress-label strong{color:#fff;font-size:12px;font-weight:500}
+  body.is-playing .progress-track{background:#ffffff26}
+  body.is-playing .progress-fill{background:#fff;box-shadow:0 0 7px #fff6}
+  body.is-playing .game-view{transition:none!important}
+  body.is-playing .portrait-reveal{animation:none!important;opacity:1;transform:none;filter:none}
+  body.is-playing .milestone{display:none}
+  body.is-result .result-screen .game-actions{justify-content:center;gap:10px;margin:18px auto 6px}
+  body.is-result .result-screen .game-actions .replay,body.is-result .result-screen .game-actions .save-image{padding:11px 23px;border:1px solid #ffffff65;border-radius:12px;background:#ffffff1c;color:#fff;font:500 14px -apple-system,BlinkMacSystemFont,"PingFang TC",sans-serif;cursor:pointer;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+  body.is-result .result-screen .game-actions .save-image:disabled{opacity:.55;cursor:wait}
+  @media(max-width:600px){body.is-playing .screen .progress{top:28px}}
+
+
+  /* Selection pages use the same black photo-strip frame as the final collage. */
+  body.is-playing .screen:not(.result-screen){max-width:820px;padding:78px clamp(13px,3vw,28px) 24px;border:1px solid #fff;border-radius:0;background:#000;box-shadow:0 18px 54px #0009,inset 0 0 0 8px #ffffff0d;-webkit-backdrop-filter:none;backdrop-filter:none}
+  body.is-playing .screen:not([hidden]):before{content:"";top:11px;left:50%;width:auto;height:auto;transform:translateX(-50%);background:none;color:#fff;font:700 13px -apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;letter-spacing:.22em;white-space:nowrap}
+  body.is-playing .screen:after{top:8px;bottom:8px;left:8px;right:8px;height:auto;border:1px solid #ffffff7d;background:none;pointer-events:none}
+  body.is-playing .screen .progress{top:48px;left:clamp(22px,4vw,42px);right:clamp(22px,4vw,42px)}
+  body.is-playing .progress-label{color:#fff}
+  body.is-playing .progress-track{height:3px;border:1px solid #ffffff8c;border-radius:0;background:#262626}
+  body.is-playing .progress-fill{border-radius:0;background:#fff;box-shadow:none}
+  body.is-playing .restart-fixed{top:12px;right:20px;border:1px solid #ffffff8a;border-radius:0;background:#000;color:#fff;opacity:.85}
+  body.is-playing .game-head{max-width:740px;margin-bottom:10px;padding:0 2px 8px;border-bottom:1px solid #ffffff8c}
+  body.is-playing .game-title{color:#fff;font-weight:700;letter-spacing:.045em}
+  body.is-playing .game-head-meta{color:#fff}
+  body.is-playing .pick-grid,body.is-playing .pick-grid.nine-grid.large-grid{max-width:740px;gap:clamp(4px,.9vw,8px);padding:clamp(4px,.9vw,8px);border:1px solid #fff;background:#000;box-shadow:0 0 0 4px #000}
+  body.is-playing .pick-card,body.is-playing .nine-grid .pick-card,body.is-playing .pk-grid .pick-card{border:1px solid #ffffffdb;border-radius:0;background:#0b0b0b;box-shadow:none}
+  body.is-playing .pick-card:hover{border-color:#fff;box-shadow:0 0 0 2px #fff6}
+  body.is-playing .pick-card.selected,body.is-playing .pick-card.is-preferred{transform:scale(1.012);border-color:#fff;background:#111;box-shadow:0 0 0 2px #fff,0 0 14px #ffffff66;filter:none}
+  body.is-playing .pick-photo,body.is-playing .nine-grid .pick-photo,body.is-playing .pk-grid .pick-photo,body.is-playing .pick-grid.pk-grid .pick-photo{aspect-ratio:1/1;background:#111}
+  body.is-playing .pick-card:after{height:38%;background:linear-gradient(0deg,rgba(21,12,44,.9),rgba(35,19,76,.42) 65%,transparent)}
+  body.is-playing .pick-name,body.is-playing .nine-grid .pick-name{font-weight:700;color:#fff}
+  body.is-playing .pick-mark{border:1px solid #fff;border-radius:0;background:#000;color:#fff;box-shadow:none}
+  body.is-playing .game-actions{max-width:740px}
+  body.is-playing .game-actions .back{border:1px solid #ffffff8a;border-radius:0;background:#111;color:#fff;opacity:.8}
+  body.is-playing .game-actions .back:hover{background:#262626;opacity:1}
+  @media(max-width:600px){body.is-playing .screen:not(.result-screen){padding:75px 14px 20px}body.is-playing .screen .progress{top:47px;left:24px;right:24px}body.is-playing .screen:not([hidden]):before{top:12px;font-size:11px}body.is-playing .restart-fixed{top:13px;right:17px;font-size:10px}body.is-playing .pick-grid{gap:4px}body.is-playing .game-title{font-size:20px}}
+  /* Fill selection frames independently of the portrait's intrinsic dimensions. */
+  body.is-playing .pick-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center 25%}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <main>
+    <div id="setup" aria-hidden="true"></div>
+    <button id="startBtn" type="button" hidden></button>
+    <section class="screen" id="waiting" hidden aria-live="polite">
+      <div class="progress" aria-label="进度" hidden>
+        <div class="progress-label"><span id="stageLabel">選擇中</span><strong>0%</strong></div>
+        <div class="progress-track" role="progressbar" aria-label="进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill"></div></div>
+      </div>
+      <div class="game-view" id="gameView"></div>
+    </section>
+  </main>
+</div>
+<script>
+(() => {
+  const roundLabels = {all:'全体参赛者',first:'一公参赛者',second:'二公参赛者',third:'三公参赛者',final:'决赛参赛者'};
+  const contestants = [
+    {id:1,name:'贺鑫隆',photo:'assets/img_002_fd73a48e8a15.jpg'},
+    {id:2,name:'贾涵予',photo:''},
+    {id:3,name:'李梓豪',photo:'assets/img_003_9e5726c1922f.jpg'},
+    {id:4,name:'贺仲星',photo:'assets/img_004_dfbd5dd25449.jpg'},
+    {id:5,name:'赵启贤',photo:'assets/img_005_e17029789682.jpg'},
+    {id:6,name:'克里斯蒂安王南钧',photo:''},
+    {id:7,name:'李东宪',photo:'assets/img_006_d5edc7f65ce8.jpg'},
+    {id:8,name:'宣淏',photo:''},
+    {id:9,name:'杨佳鹏',photo:''},
+    {id:10,name:'柳冈旻',photo:'assets/img_007_9a55699626ee.jpg'},
+    {id:11,name:'郑人予',photo:''},
+    {id:12,name:'亦辰',photo:'assets/img_008_b37fbd36969c.jpg'},
+    {id:13,name:'方晙赫',photo:'assets/img_009_a2b4601a0517.jpg'},
+    {id:14,name:'邓红海',photo:'assets/img_010_82d227fa26a2.jpg'},
+    {id:15,name:'韩哈利俊',photo:'assets/img_011_867df30c8bdc.jpg'},
+    {id:16,name:'金东玧',photo:'assets/img_012_76f84c515163.jpg'},
+    {id:17,name:'金俊抒',photo:'assets/img_013_700ad2aee748.jpg'},
+    {id:18,name:'李协',photo:''},
+    {id:19,name:'李相沅',photo:'assets/img_014_de3f08ccaa34.jpg'},
+    {id:20,name:'卢辉俊',photo:'assets/img_015_5b94adde90d8.jpg'},
+    {id:21,name:'宋旼宰',photo:'assets/img_016_83e8f13f2429.jpg'},
+    {id:22,name:'梁熙瓒',photo:'assets/img_017_5de5b5cdf480.jpg'},
+    {id:23,name:'尹旻',photo:'assets/img_018_5f74b43df38e.jpg'},
+    {id:24,name:'张家豪',photo:'assets/img_019_f85b56c3eea5.jpg'},
+    {id:25,name:'克拉斯',photo:''},
+    {id:26,name:'郭震',photo:'assets/img_020_65637597d163.jpg'},
+    {id:27,name:'解雨鑫',photo:''},
+    {id:28,name:'朴准一',photo:'assets/img_021_577574d72b6a.jpg'},
+    {id:29,name:'大雅',photo:'assets/img_022_b5e043bbbc45.jpg'},
+    {id:30,name:'朴东奎',photo:'assets/img_023_a363d25b8f86.jpg'},
+    {id:31,name:'金虔佑',photo:'assets/img_024_51cb0716022d.jpg'},
+    {id:32,name:'陈梓烁',photo:''},
+    {id:33,name:'董子奇',photo:''},
+    {id:34,name:'黄薪祐',photo:''},
+    {id:35,name:'徐源',photo:'assets/img_025_84dfa4963822.jpg'},
+    {id:36,name:'孙亨裕',photo:'assets/img_026_9eeabd55674b.jpg'},
+    {id:37,name:'周政',photo:''},
+    {id:38,name:'LEO',photo:'assets/img_027_cd2e9ea961c9.jpg'},
+    {id:39,name:'卞士宇',photo:'assets/img_028_c2113334aa3a.jpg'},
+    {id:40,name:'谢秉桦',photo:''},
+    {id:41,name:'金东铉B',photo:'assets/img_029_680c73ce00ac.jpg'},
+    {id:42,name:'树',photo:'assets/img_030_38989bfdfc15.jpg'},
+    {id:43,name:'陈金鑫',photo:''},
+    {id:44,name:'姜帆',photo:'assets/img_031_90d5fe5323a6.jpg'},
+    {id:45,name:'全李正',photo:'assets/img_032_f4568ee26c47.jpg'},
+    {id:46,name:'金俊民',photo:'assets/img_033_2677af829324.jpg'},
+    {id:47,name:'金泰朝',photo:'assets/img_034_ee8f0b84dabc.jpg'},
+    {id:48,name:'李筱迪',photo:''},
+    {id:49,name:'文源晙',photo:'assets/img_035_438b0d35da97.jpg'},
+    {id:50,name:'罗允瑞',photo:'assets/img_036_286672b9faa0.jpg'},
+    {id:51,name:'达纳通',photo:''},
+    {id:52,name:'廉叡灿',photo:'assets/img_037_4e95cb709c64.jpg'},
+    {id:53,name:'张艺华',photo:''},
+    {id:54,name:'周安信',photo:'assets/img_038_5353eb4738f3.jpg'},
+    {id:55,name:'崔峻硕',photo:''},
+    {id:56,name:'陈凯文',photo:'assets/img_039_285f7a70f2fc.jpg'},
+    {id:57,name:'利昂',photo:'assets/img_040_95dd87c868d6.jpg'},
+    {id:58,name:'郑相炫',photo:'assets/img_041_efc5b135d1a2.jpg'},
+    {id:59,name:'李承柏',photo:'assets/img_042_e8ccd6120426.jpg'},
+    {id:60,name:'李沅雨',photo:''},
+    {id:61,name:'龙国浩',photo:''},
+    {id:62,name:'安德鲁',photo:'assets/img_043_a95a4c8af7b2.jpg'},
+    {id:63,name:'青司',photo:'assets/img_044_a3a2763f8590.jpg'},
+    {id:64,name:'崔立于',photo:'assets/img_045_020c2d4576bd.jpg'},
+    {id:65,name:'韩瑞泽',photo:''},
+    {id:66,name:'金丹尼爾',photo:'assets/img_046_a12346070164.jpg'},
+    {id:67,name:'金时焕',photo:'assets/img_047_d40dc486f4a1.jpg'},
+    {id:68,name:'太地',photo:''},
+    {id:69,name:'金玹绪',photo:'assets/img_048_394c8b3b5d16.jpg'},
+    {id:70,name:'金宰现',photo:'assets/img_049_b00da53a3acb.jpg'},
+    {id:71,name:'莱恩',photo:''},
+    {id:72,name:'许謦宇',photo:'assets/img_050_33368ade87e9.jpg'},
+    {id:73,name:'孙佳洋',photo:'assets/img_051_1f6aeb6bde18.jpg'},
+    {id:74,name:'袁威',photo:''},
+    {id:75,name:'雅溭',photo:'assets/img_052_e9b4590b823c.jpg'},
+    {id:76,name:'菲尼克斯',photo:''},
+    {id:77,name:'梁大卫',photo:'assets/img_053_a96838d5ff3e.jpg'},
+    {id:78,name:'张泰润',photo:'assets/img_054_20009c581b03.jpg'},
+    {id:79,name:'梦生',photo:'assets/img_055_915935a2fe86.jpg'},
+    {id:80,name:'金永俊',photo:'assets/img_056_1778e7d8fd39.jpg'},
+    {id:81,name:'何俊锦',photo:''},
+    {id:82,name:'masato',photo:'assets/img_057_20bbbd78cab8.jpg'},
+    {id:83,name:'翔哉',photo:''},
+    {id:84,name:'薛苏仁',photo:'assets/img_058_6bc84f8e580d.jpg'},
+    {id:85,name:'蔡锦昕',photo:''},
+    {id:86,name:'张翰音',photo:'assets/img_059_c54de1bddaa7.jpg'},
+    {id:87,name:'范哲逸',photo:'assets/img_060_2a6683597716.jpg'},
+    {id:88,name:'金仁煦',photo:'assets/img_061_2c3b042e2915.jpg'},
+    {id:89,name:'朴俊成',photo:''},
+    {id:90,name:'许智暠',photo:''},
+    {id:91,name:'丁贤准',photo:'assets/img_062_b969f0f044af.jpg'},
+    {id:92,name:'潘',photo:''},
+    {id:93,name:'陈立其',photo:''},
+    {id:94,name:'董靖坤',photo:'assets/img_063_e217d4e35991.jpg'},
+    {id:95,name:'胡瀚文',photo:'assets/img_064_923bcfcd2484.jpg'},
+    {id:96,name:'黄先佑',photo:''},
+    {id:97,name:'健士朗',photo:''},
+    {id:98,name:'李政恩',photo:''},
+    {id:99,name:'年博恒',photo:'assets/img_065_ac470ec0b8c4.jpg'},
+    {id:100,name:'王忠智',photo:''},
+    {id:101,name:'張舜禹',photo:'assets/img_066_54a022ae58a8.jpg'},
+    {id:102,name:'赵光旭',photo:'assets/img_067_b7e2a2bfa931.jpg'},
+    {id:103,name:'林擎恩',photo:''},
+    {id:104,name:'吴晙豪',photo:'assets/img_068_d1f7eafb4755.jpg'},
+    {id:105,name:'张宇熙',photo:''},
+    {id:106,name:'赵明秀',photo:''},
+    {id:107,name:'金东贤',photo:'assets/img_069_50f063ee18cf.jpg'},
+    {id:108,name:'林杰',photo:''},
+    {id:109,name:'颜秋越',photo:''},
+    {id:110,name:'王东煜',photo:''},
+    {id:111,name:'金元彬',photo:''},
+    {id:112,name:'马瑶',photo:''},
+    {id:113,name:'乔冠臻',photo:''},
+    {id:114,name:'蓮祥',photo:'assets/img_070_0b7d4d9960db.jpg'},
+    {id:115,name:'桑沐',photo:''},
+    {id:116,name:'王圣珒',photo:''},
+    {id:117,name:'周言赫',photo:''},
+    {id:118,name:'方秀焕',photo:''},
+    {id:119,name:'仙',photo:'assets/img_071_5a4abcfb6fda.jpg'},
+    {id:120,name:'刘基元',photo:''},
+    {id:121,name:'洪子皓',photo:'assets/img_072_0bd4c6b2e050.jpg'},
+    {id:122,name:'李允赞',photo:''},
+    {id:123,name:'慎材霞',photo:''},
+    {id:124,name:'贾斯汀',photo:''},
+    {id:125,name:'金炫彬',photo:''},
+    {id:126,name:'孙涵霖',photo:''},
+    {id:127,name:'王灿若',photo:''},
+    {id:128,name:'杨煜谦',photo:''},
+    {id:129,name:'柯茗杰',photo:'assets/img_073_f620f73995d2.jpg'},
+    {id:130,name:'朴诺立',photo:''},
+    {id:131,name:'黄锡熙',photo:''},
+    {id:132,name:'克里森杨',photo:'assets/img_074_ff1d83db8d4c.jpg'},
+    {id:133,name:'咸弦序',photo:'assets/img_075_eb39cdf81c2e.jpg'},
+    {id:134,name:'麒麟',photo:''},
+    {id:135,name:'翔',photo:'assets/img_076_dcae393764d2.jpg'},
+    {id:136,name:'张释艺',photo:''},
+    {id:137,name:'白帘铉',photo:''},
+    {id:138,name:'陈博文',photo:'assets/img_077_9f6fb2b091d1.jpg'},
+    {id:139,name:'陈昭宇',photo:''},
+    {id:140,name:'洪智函',photo:'assets/img_078_71e6c294fc89.jpg'},
+    {id:141,name:'姜玗进',photo:'assets/img_079_0fc0612a7e56.jpg'},
+    {id:142,name:'金慜峻',photo:''},
+    {id:143,name:'权奎亨',photo:''},
+    {id:144,name:'林锌锐',photo:''},
+    {id:145,name:'文善彬',photo:''},
+    {id:146,name:'朴知敏',photo:''},
+    {id:147,name:'彭锦煜',photo:'assets/img_080_b3924f0a5ba5.jpg'},
+    {id:148,name:'邓佳骏',photo:''},
+    {id:149,name:'智也',photo:''},
+    {id:150,name:'翁伟栋',photo:''},
+    {id:151,name:'谢家辉',photo:''},
+    {id:152,name:'淯生',photo:'assets/img_081_1880d8df5b11.jpg'},
+    {id:153,name:'曾上轩',photo:''},
+    {id:154,name:'郑坤',photo:''}
+  ];
+  const photosWithTopLeftText = new Set([]);
+  const byIds = ids => ids.map(id => contestants.find(person => person.id === id)).filter(Boolean);
+  const contestantGroups = {
+    all: contestants,
+    first: byIds([
+      31,17,19,38,54,152,72,23,13,66,70,114,59,87,147,73,
+      46,67,88,30,35,10,5,24,21,129,133,56,102,77,80,95,
+      91,138,99,20,50,1,47,140,141,41,75,12,86,45,58,64,
+      14,82,49,28,62,7,15,36,16,52,78,63,29,79,44,39,
+      104,22,3,119,42,84,101,57,107,69,135,121,4,26,94,132
+    ]),
+    second: byIds([
+      73,50,147,75,17,82,30,19,72,46,91,15,
+      152,24,56,95,42,84,1,87,31,138,102,
+      54,10,5,58,38,67,88,64,86,14,28,16,
+      141,36,119,23,12,52,45,99,3,4,35,70,47
+    ]),
+    third: byIds([
+      1,95,46,30,28,152,45,31,19,38,24,54,
+      64,58,86,141,50,82,56,72,17,3,36,10
+    ]),
+    final: byIds([
+      54,38,19,31,45,141,10,46,
+      56,30,64,17,24,1,58,152
+    ])
+  };
+  const setup = document.querySelector('#setup');
+  const waiting = document.querySelector('#waiting');
+  const gameView = document.querySelector('#gameView');
+  const startBtn = document.querySelector('#startBtn');
+  const restartGameBtn = document.querySelector('#restartGameBtn');
+  const progress = document.querySelector('.progress');
+  const progressText = document.querySelector('.progress-label strong');
+  const stageLabel = document.querySelector('#stageLabel');
+  const progressTrack = document.querySelector('.progress-track');
+  const progressFill = document.querySelector('.progress-fill');
+  let gameState = null;
+  let flowState = null;
+  let sessionId = 0;
+  let decisionHistory = [];
+  const UI = Object.freeze({HOME:'HOME',INTRO:'INTRO',GRID_ENTERING:'GRID_ENTERING',GRID_SELECTING:'GRID_SELECTING',GRID_CONFIRMING:'GRID_CONFIRMING',GRID_EXITING:'GRID_EXITING',INTERSTITIAL:'INTERSTITIAL',PK_ENTERING:'PK_ENTERING',PK_SELECTING:'PK_SELECTING',PK_CONFIRMING:'PK_CONFIRMING',PK_EXITING:'PK_EXITING',RESULT_ENTERING:'RESULT_ENTERING',RESULT:'RESULT'});
+  let uiState = UI.HOME;
+  let soundEnabled = false;
+  const setUIState = next => { uiState = next; };
+  const playUIFeedback = type => {
+    if (!soundEnabled) return;
+    try { window.dispatchEvent(new CustomEvent('boys2planet-ui-feedback', {detail:{type}})); }
+    catch (error) { /* Optional future sound hook. */ }
+  };
+  const lightHaptic = () => {
+    try { if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(6); }
+    catch (error) { /* Haptics are optional. */ }
+  };
+
+  const scrollTop = () => {
+    try { window.scrollTo({top:0,behavior:'smooth'}); }
+    catch (error) { window.scrollTo(0, 0); }
+  };
+
+  const showError = error => {
+    document.body.classList.add('is-playing');
+    setup.hidden = true;
+    waiting.hidden = false;
+    progress.hidden = false;
+    gameView.innerHTML = `
+      <div class="empty-state">
+        <div class="game-kicker">启动失败</div>
+        <h2>游戏没有成功开始</h2>
+        <p>请把这一段错误讯息截图给我：${error.message || error}</p>
+        <button class="back" type="button" data-action="setup">上一页</button>
+      </div>
+    `;
+    gameView.querySelector('[data-action="setup"]').addEventListener('click', showSetup);
+    scrollTop();
+  };
+
+  const syncRoundChoices = () => {
+    document.querySelectorAll('.choice').forEach(label => {
+      const input = label.querySelector('input');
+      if (input && input.checked) label.classList.add('is-checked');
+      else label.classList.remove('is-checked');
+    });
+  };
+
+  const setProgress = value => {
+    const percent = Math.max(0, Math.min(100, Math.round(value)));
+    progressText.textContent = `${percent}%`;
+    progressTrack.setAttribute('aria-valuenow', percent);
+    progressFill.style.width = `${percent}%`;
+  };
+
+  const shuffle = items => {
+    const list = [...items];
+    for (let index = list.length - 1; index > 0; index -= 1) {
+      const target = Math.floor(Math.random() * (index + 1));
+      [list[index], list[target]] = [list[target], list[index]];
+    }
+    return list;
+  };
+
+  const chunk = (items, size) => {
+    const groups = [];
+    for (let index = 0; index < items.length; index += size) groups.push(items.slice(index, index + size));
+    return groups;
+  };
+
+  const showSetup = () => {
+    sessionId += 1;
+    setUIState(UI.INTRO);
+    document.body.classList.add('is-playing');
+    document.body.classList.remove('is-result');
+    gameState = null;
+    flowState = null;
+    imageCache.clear();
+    gameView.classList.remove('is-transitioning', 'is-entering', 'is-choice-locked', 'is-fast');
+    waiting.classList.remove('pk-mode');
+    waiting.classList.remove('result-screen');
+    waiting.hidden = false;
+    setup.hidden = true;
+    progress.hidden = false;
+    setProgress(0);
+    syncRoundChoices();
+    startFlow('first');
+    scrollTop();
+  };
+
+  const renderEmptyState = round => {
+    gameView.innerHTML = `
+      <div class="empty-state">
+        <div class="game-kicker">名单待补</div>
+        <h2>${roundLabels[round]}还没有参赛者</h2>
+        <p>补上名单后，就能进入对应阶段。</p>
+        <button class="back" type="button" data-action="setup">上一页</button>
+      </div>
+    `;
+    gameView.querySelector('[data-action="setup"]').addEventListener('click', showSetup);
+  };
+
+  const personCard = (person, index = 0) => `
+    <button class="pick-card portrait-reveal" type="button" data-id="${person.id}" style="--reveal-delay:${index * (flowState?.fast ? 36 : 45)}ms">
+      <span class="pick-mark">✓</span>
+      <span class="pick-photo">${person.photo ? `<img src="${person.photo}" alt="${person.name}" data-person-id="${person.id}" ${photosWithTopLeftText.has(person.id) ? 'data-trim-top="true"' : ''}>` : '照片待补'}</span>
+      <span class="pick-name">${person.name}</span>
+    </button>
+  `;
+
+  const uniquePeople = people => {
+    const seen = new Set();
+    return people.filter(person => {
+      if (seen.has(person.id)) return false;
+      seen.add(person.id);
+      return true;
+    });
+  };
+
+  const stageProgress = ratio => {
+    const start = gameState.progressStart || 0;
+    const end = gameState.progressEnd || 100;
+    setProgress(start + (end - start) * ratio);
+  };
+
+  const restoreFinalBack = () => {
+    document.body.classList.remove('is-result');
+    progress.hidden = false;
+    waiting.classList.remove('result-screen');
+    showSetup();
+  };
+
+  const createRankingImage = async board => {
+    const width = 1242, height = 1561;
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const context = canvas.getContext('2d');
+    if (!context) throw new Error('無法建立圖片');
+    const source = getComputedStyle(board).backgroundImage.match(/^url\(["']?(.*?)["']?\)$/)?.[1];
+    if (!source) throw new Error('找不到成果框');
+    const frame = new Image();
+    frame.src = source;
+    if (frame.decode) await frame.decode();
+    else if (!frame.complete) await new Promise((resolve,reject) => { frame.onload = resolve; frame.onerror = reject; });
+    context.drawImage(frame,0,0,width,height);
+    // Match the frame's CSS treatment without changing the original portrait colors.
+    const framePixels = context.getImageData(0,0,width,height);
+    const rgba = framePixels.data;
+    for (let index = 0; index < rgba.length; index += 4) {
+      const gray = rgba[index] * .2126 + rgba[index + 1] * .7152 + rgba[index + 2] * .0722;
+      const value = Math.max(0,Math.min(255,(gray * .8 - 128) * 5 + 128));
+      rgba[index] = rgba[index + 1] = rgba[index + 2] = value;
+    }
+    context.putImageData(framePixels,0,0);
+    // Cover the lettering baked into the source frame, then draw the new credit.
+    context.fillStyle = '#000';
+    context.fillRect(width * .45,height * .965,width * .1,height * .025);
+    context.textAlign = 'center';
+    context.textBaseline = 'bottom';
+    context.font = '400 20px -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif';
+    context.fillStyle = '#fff';
+    context.fillText('made by @k1rimi66',width / 2,height * .996);
+    context.fillStyle = '#000';
+    context.fillRect(width * .125,height * .128,width * .75,height * .84);
+    const boardRect = board.getBoundingClientRect();
+    const scaleX = width / boardRect.width, scaleY = height / boardRect.height;
+    const cells = [...board.querySelectorAll('.ranking-cell')];
+    await Promise.all(cells.map(async cell => {
+      const image = cell.querySelector('img');
+      if (image?.decode) await image.decode().catch(() => {});
+    }));
+    for (const cell of cells) {
+      const rect = cell.getBoundingClientRect();
+      const x = (rect.left - boardRect.left) * scaleX;
+      const y = (rect.top - boardRect.top) * scaleY;
+      const w = rect.width * scaleX, h = rect.height * scaleY;
+      context.fillStyle = '#111';
+      context.fillRect(x,y,w,h);
+      const image = cell.querySelector('img');
+      if (image?.naturalWidth && image?.naturalHeight) {
+        const cover = Math.max(w / image.naturalWidth,h / image.naturalHeight);
+        const sourceWidth = w / cover, sourceHeight = h / cover;
+        const trimTop = image.hasAttribute('data-trim-top');
+        const cropWidth = trimTop ? sourceWidth / 1.12 : sourceWidth;
+        const cropHeight = trimTop ? sourceHeight / 1.12 : sourceHeight;
+        const sourceX = (image.naturalWidth - cropWidth) / 2;
+        const originalY = (image.naturalHeight - sourceHeight) * .24;
+        const sourceY = Math.min(image.naturalHeight - cropHeight,originalY + (trimTop ? sourceHeight * .098 : 0));
+        context.drawImage(image,sourceX,sourceY,cropWidth,cropHeight,x,y,w,h);
+      } else {
+        context.fillStyle = '#fff';
+        context.textAlign = 'center';
+        context.font = `400 ${Math.round(16 * scaleX)}px -apple-system, sans-serif`;
+        context.fillText(cell.querySelector('.ranking-name')?.textContent || '',x + w / 2,y + h / 2);
+      }
+      const shade = context.createLinearGradient(0,y + h * .65,0,y + h);
+      shade.addColorStop(0,'rgba(0,0,0,0)');
+      shade.addColorStop(1,'rgba(0,0,0,.88)');
+      context.fillStyle = shade;
+      context.fillRect(x,y + h * .65,w,h * .35);
+      const name = cell.querySelector('.ranking-name')?.textContent || '';
+      const rank = cell.querySelector('.ranking-number')?.textContent || '';
+      let size = Math.min(32,Math.max(19,Math.round(17 * scaleX)));
+      context.textAlign = 'center';
+      context.textBaseline = 'bottom';
+      context.fillStyle = '#fff';
+      context.shadowColor = '#000';
+      context.shadowBlur = 7;
+      context.font = `700 ${size}px -apple-system, "PingFang TC", sans-serif`;
+      while (context.measureText(`${rank} ${name}`).width > w - 12 && size > 15) context.font = `700 ${--size}px -apple-system, "PingFang TC", sans-serif`;
+      context.fillText(`${rank} ${name}`,x + w / 2,y + h - Math.max(7,8 * scaleY));
+      context.shadowBlur = 0;
+    }
+    return new Promise((resolve,reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('無法輸出圖片')),'image/png'));
+  };
+
+  const saveRankingImage = async button => {
+    if (button.disabled) return;
+    button.disabled = true;
+    button.textContent = '正在準備圖片…';
+    try {
+      if (uiState === UI.RESULT_ENTERING) await new Promise(resolve => setTimeout(resolve,850));
+      const board = gameView.querySelector('.ranking-board');
+      if (!board) return;
+      const blob = await createRankingImage(board);
+      const filename = 'BOYS-II-PLANET-9-PICKS.png';
+      if (typeof File === 'function' && navigator.share && navigator.canShare) {
+        const file = new File([blob],filename,{type:'image/png'});
+        try {
+          if (navigator.canShare({files:[file]})) {
+            await navigator.share({files:[file],title:'9 PICKS'});
+            return;
+          }
+        } catch (error) { if (error.name === 'AbortError') return; }
+      }
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url),60000);
+    } catch (error) {
+      alert(`保存圖片失敗：${error.message || error}`);
+    } finally {
+      button.disabled = false;
+      button.textContent = '保存图片';
+    }
+  };
+
+  const renderFinalRanking = picks => {
+    setUIState(UI.RESULT_ENTERING);
+    document.body.classList.add('is-result');
+    progress.hidden = true;
+    waiting.classList.add('result-screen');
+    const layout = [3, 4, 5, 1, 0, 2, 6, 7, 8]
+      .filter(index => index < picks.length)
+      .map(index => ({person: picks[index], rank: index + 1}));
+    gameView.innerHTML = `
+      <div class="ranking-board">
+        <div class="ranking-grid" aria-label="最終排名九宮格，第一名在正中間">
+          ${layout.map(({person, rank}) => `
+            <div class="ranking-cell${rank === 1 ? ' first' : ''}" style="--rank-delay:${(rank - 1) * 50}ms">
+              <div class="ranking-image">${person.photo ? `<img src="${person.photo}" alt="${person.name}" data-person-id="${person.id}" ${photosWithTopLeftText.has(person.id) ? 'data-trim-top="true"' : ''}>` : person.name}</div>
+              <div class="ranking-info"><span class="ranking-number">${rank}.</span><span class="ranking-name">${person.name}</span></div>
+            </div>
+          `).join('')}
+        </div>
+        <span class="booth-credit-mask" aria-hidden="true"></span>
+        <span class="booth-credit">made by @k1rimi66</span>
+      </div>
+      <div class="game-actions"><button class="save-image" type="button" data-action="save-image">保存图片</button><button class="replay" type="button" data-action="replay">再玩一次</button></div>
+      <p class="credit"><span class="credit-en">made by @k1rimi66</span></p>
+    `;
+    playUIFeedback('result');
+    gameView.querySelector('[data-action="replay"]').addEventListener('click', showSetup);
+    gameView.querySelector('[data-action="save-image"]').addEventListener('click', event => { void saveRankingImage(event.currentTarget); });
+    const session = sessionId;
+    setTimeout(() => { if (session === sessionId && uiState === UI.RESULT_ENTERING) setUIState(UI.RESULT); }, 850);
+  };
+
+  const balancedGroups = (people, requestedCount) => {
+    const shuffled = shuffle(people);
+    const count = requestedCount || Math.ceil(shuffled.length / 9);
+    const base = Math.floor(shuffled.length / count);
+    const extra = shuffled.length % count;
+    const groups = [];
+    let offset = 0;
+    for (let index = 0; index < count; index += 1) {
+      const size = base + (index < extra ? 1 : 0);
+      groups.push(shuffled.slice(offset,offset + size));
+      offset += size;
+    }
+    return groups;
+  };
+  const selectionQuota = count => ({1:1,2:1,3:1,4:2,5:2,6:2,7:3,8:3,9:3})[count];
+  const imageCache = new Map();
+  const preloadPeople = people => uniquePeople(people).forEach(person => {
+    if (!person.photo || imageCache.has(person.id)) return;
+    const img = new Image();
+    img.src = person.photo;
+    imageCache.set(person.id, img);
+  });
+  const pause = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
+  const preloadReady = async people => {
+    preloadPeople(people);
+    const images = uniquePeople(people).filter(person => person.photo).map(person => imageCache.get(person.id));
+    const ready = images.map(image => {
+      if (image.complete && image.naturalWidth) return Promise.resolve();
+      if (typeof image.decode === 'function') return image.decode().catch(() => {});
+      if (typeof image.addEventListener !== 'function') return Promise.resolve();
+      return new Promise(resolve => {
+        image.addEventListener('load', resolve, {once:true});
+        image.addEventListener('error', resolve, {once:true});
+      });
+    });
+    await Promise.race([Promise.all(ready),pause(450)]);
+  };
+  const revealPhotos = () => gameView.querySelectorAll('.pick-card').forEach(card => {
+    const image = card.querySelector('img');
+    if (!image) { card.classList.add('photo-ready'); return; }
+    const personId = Number(card.dataset.id);
+    if (Number(image.dataset.personId) !== personId) return;
+    const ready = () => {
+      if (Number(card.dataset.id) === personId) card.classList.add('photo-ready');
+    };
+    if (typeof image.decode === 'function') image.decode().then(ready, ready);
+    else if (image.complete) ready();
+    else {
+      image.addEventListener('load', ready, {once:true});
+      image.addEventListener('error', ready, {once:true});
+    }
+    setTimeout(ready, 700);
+  });
+  const timeNow = () => (typeof performance !== 'undefined' ? performance.now() : Date.now());
+  const recordDecision = enteredAt => {
+    if (!flowState) return;
+    flowState.decisionTimes.push(timeNow() - enteredAt);
+    flowState.decisionTimes = flowState.decisionTimes.slice(-3);
+    flowState.fast = flowState.decisionTimes.length >= 3 && flowState.decisionTimes.reduce((a,b) => a + b, 0) / 3 < 800;
+    gameView.classList[flowState.fast ? 'add' : 'remove']('is-fast');
+  };
+  const transitionContent = async (state, commit, nextPeople = [], confirmationMs = 0) => {
+    const session = sessionId;
+    await Promise.all([preloadReady(nextPeople),pause(confirmationMs)]);
+    if (session !== sessionId || state !== gameState) return;
+    gameView.classList.remove('is-choice-locked');
+    commit();
+  };
+  const showInterstitial = (message, next, duration = 900) => {
+    const session = sessionId;
+    setUIState(UI.INTERSTITIAL);
+    gameView.innerHTML = `<div class="milestone" aria-live="polite"><p>${message}</p></div>`;
+    playUIFeedback('complete');
+    setTimeout(() => {
+      if (session === sessionId && uiState === UI.INTERSTITIAL) next();
+    }, duration);
+  };
+
+  const cloneDecisionState = value => {
+    if (Array.isArray(value)) return value.map(cloneDecisionState);
+    if (value instanceof Set) return new Set(value);
+    if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key,item]) => [key,cloneDecisionState(item)]));
+    return value;
+  };
+  const rememberDecision = () => decisionHistory.push({
+    game:cloneDecisionState({...gameState,history:[],locked:false}),
+    flow:cloneDecisionState(flowState)
+  });
+  const restorePreviousDecision = () => {
+    if (!gameState) return;
+    if (!gameState.locked && !decisionHistory.length) return;
+    sessionId += 1; // Cancel a pending automatic advance before restoring the page.
+    if (!gameState.locked) {
+      const previous = decisionHistory.pop();
+      gameState = previous.game;
+      flowState = previous.flow;
+    }
+    gameState.locked = false;
+    gameView.classList.remove('is-choice-locked');
+    gameView.classList.toggle('is-fast',!!flowState.fast);
+    waiting.classList.remove('result-screen');
+    waiting.classList.toggle('pk-mode',gameState.type === 'tournament');
+    document.body.classList.remove('is-result');
+    progress.hidden = false;
+    if (gameState.type === 'ninePick') renderNinePickGroup();
+    else advanceTournament();
+  };
+  const restoreNinePickBack = restorePreviousDecision;
+
+  const completeNinePickStage = () => gameState.onComplete({
+    picks: uniquePeople(gameState.picks),
+    eliminated: uniquePeople(gameState.eliminated)
+  });
+
+  const renderNinePickGroup = () => {
+    if (gameState.groupIndex >= gameState.groups.length) {
+      completeNinePickStage();
+      return;
+    }
+    const group = gameState.groups[gameState.groupIndex];
+    gameState.locked = false;
+    if (group.length === 1) {
+      gameState.picks.push(group[0]);
+      gameState.groupIndex += 1;
+      renderNinePickGroup();
+      return;
+    }
+    const state = gameState;
+    const required = state.selectionQuota ? state.selectionQuota(group.length) : selectionQuota(group.length);
+    const renderToken = state.renderToken = (state.renderToken || 0) + 1;
+    setUIState(UI.GRID_ENTERING);
+    state.enteredAt = timeNow();
+    const selected = new Set();
+    const groupNumber = gameState.groupIndex + 1;
+    stageLabel.textContent = `${state.stageLabel} · ${groupNumber} / ${state.groups.length}`;
+    stageProgress(Math.min(.98, (groupNumber - 1) / gameState.groups.length));
+    preloadPeople(gameState.groups[gameState.groupIndex + 1] || []);
+    gameView.innerHTML = `
+      <div class="game-head">
+        <h2 class="game-title">選擇 ${required} 位</h2>
+         <div class="game-head-meta"><span class="glass-dots" id="pickStatus" aria-label="已選 0 / ${required}">${Array.from({length:required}, () => '<i class="glass-dot"></i>').join('')}</span></div>
+      </div>
+       <div class="pick-grid nine-grid ${group.length > 9 ? 'large-grid' : ''}">${group.map(personCard).join('')}</div>
+      <div class="game-actions">
+        <button class="back" type="button" data-action="back" ${decisionHistory.length ? '' : 'disabled'}>上一頁</button>
+      </div>`;
+    const status = gameView.querySelector('#pickStatus');
+    const syncSelection = () => {
+      status.setAttribute('aria-label', `已選 ${selected.size} / ${required}`);
+      status.querySelectorAll('.glass-dot').forEach((dot, index) => dot.classList.toggle('filled', index < selected.size));
+    };
+    const cards = [...gameView.querySelectorAll('.pick-card')];
+    cards.forEach(card => {
+      card.addEventListener('pointerdown', () => {
+        if (uiState === UI.GRID_SELECTING) card.classList.add('is-pressed');
+      });
+      ['pointerup','pointercancel','pointerleave'].forEach(type => card.addEventListener(type, () => card.classList.remove('is-pressed')));
+      card.addEventListener('click', () => {
+      if (state !== gameState || state.locked || state.renderToken !== renderToken || uiState !== UI.GRID_SELECTING) return;
+      const id = Number(card.dataset.id);
+      if (selected.has(id)) {
+        selected.delete(id);
+        card.classList.remove('selected');
+      } else if (selected.size < required) {
+        selected.add(id);
+        card.classList.add('selected');
+      }
+      lightHaptic();
+      playUIFeedback('select');
+      syncSelection();
+      if (selected.size === required) {
+        state.locked = true;
+        setUIState(UI.GRID_CONFIRMING);
+        recordDecision(state.enteredAt);
+        status.classList.add('complete');
+        gameView.classList.add('is-choice-locked');
+        cards.forEach(other => other.classList.add(selected.has(Number(other.dataset.id)) ? 'is-preferred' : 'is-muted'));
+        const picked = group.filter(person => selected.has(person.id));
+        void transitionContent(state, () => {
+          rememberDecision();
+          state.picks.push(...picked);
+          state.eliminated.push(...group.filter(person => !selected.has(person.id)));
+          state.groupIndex += 1;
+          renderNinePickGroup();
+        },state.groups[state.groupIndex + 1] || [],380);
+      }
+      });
+    });
+    revealPhotos();
+    setUIState(UI.GRID_SELECTING);
+    gameView.querySelector('[data-action="back"]').addEventListener('click', () => {
+      if (state === gameState && state.renderToken === renderToken && [UI.GRID_SELECTING,UI.GRID_CONFIRMING].includes(uiState)) restoreNinePickBack();
+    });
+  };
+
+  const startNinePickStage = options => {
+    const people = uniquePeople(options.source);
+    flowState.currentPool = people;
+    waiting.classList.remove('pk-mode');
+    gameState = {
+      type:'ninePick',round:flowState.round,
+       groups:balancedGroups(people,options.groupCount),groupIndex:0,picks:[],eliminated:[],
+       history:[],locked:false,stageLabel:options.stageLabel,progressStart:options.progressStart,
+      progressEnd:options.progressEnd,onComplete:options.onComplete,selectionQuota:options.selectionQuota
+    };
+    preloadPeople(gameState.groups[0] || []);
+    renderNinePickGroup();
+  };
+
+  // Persistent Tournament Top-K. Nodes use indices so parent/path data stays serializable.
+  const tournamentPairKey = (a, b) => JSON.stringify([a.id, b.id].sort((x,y) => String(x).localeCompare(String(y))));
+  const createTournament = (people, k = 9) => {
+    let size = 1;
+    while (size < people.length) size *= 2;
+    const tree = Array.from({length:size * 2}, (_, id) => ({
+      id,parent:id > 1 ? Math.floor(id / 2) : null,
+      left:id < size ? id * 2 : null,right:id < size ? id * 2 + 1 : null,
+      winner:null,loser:null,resolved:id >= size,revision:0
+    }));
+    const leafById = {};
+    people.forEach((person,index) => {
+      const leaf = size + index;
+      tree[leaf].winner = person;
+      leafById[person.id] = leaf;
+    });
+    for (let id = size; id < size * 2; id += 1) {
+      const path = [];
+      for (let parent = tree[id].parent; parent !== null; parent = tree[parent].parent) path.push(parent);
+      tree[id].path = path;
+    }
+    return {
+      type:'tournament',people,tree,leafById,root:1,k:Math.min(k,people.length),
+      pending:Array.from({length:size - 1},(_,i) => size - 1 - i),pendingIndex:0,
+      currentPair:null,currentNode:null,comparisonCache:{},comparisonHistory:[],
+      extractionHistory:[],topK:[],comparisons:0,cacheHits:0,byes:0,done:false,locked:false
+    };
+  };
+  const resolveTournamentNode = (state,id,winner,source) => {
+    const node = state.tree[id];
+    const left = state.tree[node.left].winner;
+    const right = state.tree[node.right].winner;
+    node.winner = winner;
+    node.loser = left && right ? (winner.id === left.id ? right : left) : null;
+    node.resolved = true;
+    node.revision += 1;
+    state.comparisonHistory.push({node:id,left:left?.id ?? null,right:right?.id ?? null,
+      winner:winner?.id ?? null,loser:node.loser?.id ?? null,source,rank:state.topK.length + 1});
+    if (source === 'cache') state.cacheHits += 1;
+    if (source === 'bye') state.byes += 1;
+    state.pendingIndex += 1;
+  };
+  const answerTournament = (state,selectedId) => {
+    if (state.done || !state.currentPair) return false;
+    const winner = state.currentPair.find(person => person.id === selectedId);
+    if (!winner) return false;
+    state.comparisonCache[tournamentPairKey(...state.currentPair)] = winner.id;
+    state.comparisons += 1;
+    resolveTournamentNode(state,state.currentNode,winner,'choice');
+    state.currentPair = null;
+    state.currentNode = null;
+    return true;
+  };
+  // Only the initial queue covers the whole tree. Every later queue is one leaf's path.
+  const stepTournament = state => {
+    if (state.done) return null;
+    if (state.currentPair) return state.currentPair;
+    while (true) {
+      if (state.pendingIndex < state.pending.length) {
+        const id = state.pending[state.pendingIndex];
+        const node = state.tree[id];
+        const left = state.tree[node.left].winner;
+        const right = state.tree[node.right].winner;
+        if (!left || !right) {
+          resolveTournamentNode(state,id,left || right,'bye');
+          continue;
+        }
+        const key = tournamentPairKey(left,right);
+        if (Object.prototype.hasOwnProperty.call(state.comparisonCache,key)) {
+          const winnerId = state.comparisonCache[key];
+          resolveTournamentNode(state,id,left.id === winnerId ? left : right,'cache');
+          continue;
+        }
+        state.currentNode = id;
+        state.currentPair = [left,right];
+        return state.currentPair;
+      }
+      const winner = state.tree[state.root].winner;
+      if (!winner || state.topK.length >= state.k) { state.done = true; return null; }
+      state.topK.push(winner);
+      const leaf = state.leafById[winner.id];
+      state.tree[leaf].winner = null;
+      state.tree[leaf].revision += 1;
+      const path = state.tree[leaf].path.slice();
+      const stopped = state.topK.length === state.k;
+      state.extractionHistory.push({rank:state.topK.length,winner:winner.id,leaf,path,
+        replay:stopped ? [] : path.slice(),historyOffset:state.comparisonHistory.length});
+      // The cached root is a historical result after the final extraction; no #10 work.
+      if (stopped) { state.done = true; state.pending = []; state.pendingIndex = 0; return null; }
+      for (const id of path) state.tree[id].resolved = false;
+      state.pending = path;
+      state.pendingIndex = 0;
+    }
+  };
+
+  const advanceTournament = () => {
+    if (!gameState || gameState.type !== 'tournament') return;
+    const state = gameState;
+    const pair = stepTournament(state);
+    if (pair) { preloadPeople(pair); renderTournamentMatch(); return; }
+    flowState.finalists = state.topK.slice();
+    renderFinalRanking(flowState.finalists);
+  };
+  const chooseTournament = selectedId => {
+    const state = gameState;
+    if (!state || state.type !== 'tournament' || state.locked || uiState !== UI.PK_SELECTING ||
+        !state.currentPair?.some(person => person.id === selectedId)) return;
+    state.locked = true;
+    setUIState(UI.PK_CONFIRMING);
+    recordDecision(state.enteredAt);
+    lightHaptic();
+    playUIFeedback('select');
+    gameView.classList.add('is-choice-locked');
+    gameView.querySelectorAll('.pick-card').forEach(card => {
+      card.disabled = true;
+      card.classList.add(Number(card.dataset.id) === selectedId ? 'is-preferred' : 'is-muted');
+    });
+    void transitionContent(state, () => {
+      rememberDecision();
+      answerTournament(state,selectedId);
+      advanceTournament();
+    },[],300);
+  };
+  const renderTournamentMatch = () => {
+    const state = gameState;
+    state.locked = false;
+    const renderToken = state.renderToken = (state.renderToken || 0) + 1;
+    setUIState(UI.PK_ENTERING);
+    state.enteredAt = timeNow();
+    stageLabel.textContent = '最終選擇';
+    stageProgress(state.topK.length / Math.max(1,state.k));
+    gameView.innerHTML = `
+      <div class="game-head"><h2 class="game-title">更喜歡哪一位？</h2></div>
+      <div class="pick-grid pk-grid">${state.currentPair.map(personCard).join('')}</div>
+      <div class="game-actions">
+        <button class="back" type="button" data-action="back" ${decisionHistory.length ? '' : 'disabled'}>上一頁</button>
+      </div>`;
+    gameView.querySelector('[data-action="back"]').addEventListener('click', () => {
+      if (state === gameState && state.renderToken === renderToken && [UI.PK_SELECTING,UI.PK_CONFIRMING].includes(uiState)) restorePreviousDecision();
+    });
+    gameView.querySelectorAll('.pick-card').forEach(card => {
+      card.addEventListener('pointerdown', () => { if (uiState === UI.PK_SELECTING) card.classList.add('is-pressed'); });
+      ['pointerup','pointercancel','pointerleave'].forEach(type => card.addEventListener(type, () => card.classList.remove('is-pressed')));
+      card.addEventListener('click', event => {
+        if (state !== gameState || state.renderToken !== renderToken || event.detail > 1) return;
+        chooseTournament(Number(card.dataset.id));
+      });
+    });
+    revealPhotos();
+    setUIState(UI.PK_SELECTING);
+  };
+  const startTournamentStage = source => {
+    const people = shuffle(uniquePeople(source)); // Exactly one shuffle of the final pool.
+    flowState.finalCandidatePool = people;
+    preloadPeople(people);
+    waiting.classList.add('pk-mode');
+    gameState = Object.assign(createTournament(people),{
+      round:flowState.round,progressStart:65,progressEnd:100
+    });
+    advanceTournament();
+  };
+
+  const startFlow = round => {
+    decisionHistory = [];
+    waiting.classList.remove('result-screen');
+    document.body.classList.remove('is-result');
+    const pool = uniquePeople(contestantGroups[round]);
+    if (!pool.length) {
+      renderEmptyState(round);
+      return;
+    }
+    flowState = {
+      round,currentPool:pool,winners:[],mainWinners:[],challengePool:[],mainSelectedIds:new Set(),
+      challengeWinners:[],finalCandidatePool:[],finalists:[],
+      decisionTimes:[],fast:false
+    };
+    const beginTournament = people => startTournamentStage(uniquePeople([...flowState.mainWinners,...people]));
+    if (pool.length <= 9) {
+      beginTournament(pool);
+      return;
+    }
+    startNinePickStage({
+      source:pool,stageLabel:'初選',progressStart:0,progressEnd:35,
+      onComplete:({picks,eliminated}) => {
+        flowState.mainWinners = uniquePeople(picks);
+        flowState.winners = flowState.mainWinners;
+        flowState.mainSelectedIds = new Set(flowState.mainWinners.map(person => person.id));
+        flowState.challengePool = uniquePeople(eliminated);
+        if (!flowState.challengePool.length) {
+          beginTournament([]);
+          return;
+        }
+        // Only contestants who were not chosen in the first round enter this single second-chance round.
+        startNinePickStage({
+           source:flowState.challengePool,stageLabel:'再次選擇',groupCount:2,selectionQuota:count => Math.min(1,count),
+          progressStart:35,progressEnd:65,
+          onComplete:({picks:secondChancePicks}) => {
+            flowState.challengeWinners = uniquePeople(secondChancePicks);
+            beginTournament(flowState.challengeWinners);
+          }
+        });
+      }
+    });
+  };
+
+  const startGame = () => {
+    if (!waiting.hidden || setup.hidden) return;
+    sessionId += 1;
+    setUIState(UI.INTRO);
+    document.body.classList.add('is-playing');
+    document.body.classList.remove('is-result');
+    const round = 'first';
+    setup.hidden = true;
+    waiting.hidden = false;
+    progress.hidden = false;
+    startFlow(round);
+    scrollTop();
+  };
+
+  window.boys2planetContestants = contestants;
+  window.boys2planetGroups = contestantGroups;
+  window.startBoysPlanetGame = () => {
+    try { startGame(); }
+    catch (error) { showError(error); }
+  };
+  document.querySelectorAll('input[name="round"]').forEach(input => input.addEventListener('change', syncRoundChoices));
+  syncRoundChoices();
+  if (restartGameBtn) restartGameBtn.addEventListener('click', () => {
+    showSetup();
+  });
+  startBtn.addEventListener('click', event => {
+    event.preventDefault();
+    if (setup.hidden) return;
+    window.startBoysPlanetGame();
+  });
+  let swipeStartY = null;
+  startBtn.addEventListener('touchstart', event => {
+    swipeStartY = event.touches[0]?.clientY ?? null;
+  }, {passive:true});
+  startBtn.addEventListener('touchend', event => {
+    if (swipeStartY === null || setup.hidden) return;
+    const distance = swipeStartY - (event.changedTouches[0]?.clientY ?? swipeStartY);
+    swipeStartY = null;
+    if (distance < 40) return;
+    event.preventDefault();
+    window.startBoysPlanetGame();
+  }, {passive:false});
+  window.requestAnimationFrame(() => window.startBoysPlanetGame());
+})();
+</script>
+</body>
+</html>
