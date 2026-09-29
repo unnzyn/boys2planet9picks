@@ -357,6 +357,32 @@ body.is-playing .photo-ready .pick-photo img[data-trim-top],
 body.is-playing .pick-name,
 body.is-playing .photo-ready .pick-name{opacity:1!important;transform:none!important}
 
+
+
+/* Mobile performance pass: reduce GPU/memory pressure during gameplay. */
+@media (max-width:900px){
+  body.is-playing:before,
+  body.is-playing .wrap main:after{animation:none!important;will-change:auto!important}
+  body.is-playing .screen,
+  body.is-result .screen.result-screen,
+  body.is-playing .game-actions .back,
+  body.is-playing .restart-fixed{
+    -webkit-backdrop-filter:none!important;
+    backdrop-filter:none!important;
+  }
+  body.is-playing .pick-card,
+  body.is-playing .pick-photo img,
+  .game-view{
+    will-change:auto!important;
+  }
+  .portrait-reveal{
+    animation:none!important;
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -673,7 +699,7 @@ body.is-playing .photo-ready .pick-name{opacity:1!important;transform:none!impor
   const personCard = (person, index = 0) => `
     <button class="pick-card portrait-reveal" type="button" data-id="${person.id}" style="--reveal-delay:${index * (flowState?.fast ? 36 : 45)}ms">
       <span class="pick-mark">✓</span>
-      <span class="pick-photo">${person.photo ? `<img src="${person.photo}" alt="${person.name}" data-person-id="${person.id}" decoding="async" ${photosWithTopLeftText.has(person.id) ? 'data-trim-top="true"' : ''}>` : '照片待补'}</span>
+      <span class="pick-photo">${person.photo ? `<img src="${person.photo}" alt="${person.name}" data-person-id="${person.id}" decoding="async" loading="eager" ${photosWithTopLeftText.has(person.id) ? 'data-trim-top="true"' : ''}>` : '照片待补'}</span>
       <span class="pick-name">${person.name}</span>
     </button>
   `;
@@ -833,7 +859,7 @@ body.is-playing .photo-ready .pick-name{opacity:1!important;transform:none!impor
         <div class="ranking-grid" aria-label="最終排名九宮格，第一名在正中間">
           ${layout.map(({person, rank}) => `
             <div class="ranking-cell${rank === 1 ? ' first' : ''}" style="--rank-delay:${(rank - 1) * 50}ms">
-              <div class="ranking-image">${person.photo ? `<img src="${person.photo}" alt="${person.name}" data-person-id="${person.id}" decoding="async" ${photosWithTopLeftText.has(person.id) ? 'data-trim-top="true"' : ''}>` : person.name}</div>
+              <div class="ranking-image">${person.photo ? `<img src="${person.photo}" alt="${person.name}" data-person-id="${person.id}" decoding="async" loading="eager" ${photosWithTopLeftText.has(person.id) ? 'data-trim-top="true"' : ''}>` : person.name}</div>
               <div class="ranking-info"><span class="ranking-number">${rank}.</span><span class="ranking-name">${person.name}</span></div>
             </div>
           `).join('')}
@@ -874,36 +900,10 @@ body.is-playing .photo-ready .pick-name{opacity:1!important;transform:none!impor
     imageCache.set(person.id, img);
   });
   const pause = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
-  const preloadReady = async people => {
-    preloadPeople(people);
-    const images = uniquePeople(people).filter(person => person.photo).map(person => imageCache.get(person.id));
-    const ready = images.map(image => {
-      if (image.complete && image.naturalWidth) return Promise.resolve();
-      if (typeof image.decode === 'function') return image.decode().catch(() => {});
-      if (typeof image.addEventListener !== 'function') return Promise.resolve();
-      return new Promise(resolve => {
-        image.addEventListener('load', resolve, {once:true});
-        image.addEventListener('error', resolve, {once:true});
-      });
-    });
-    await Promise.race([Promise.all(ready),pause(450)]);
-  };
+  const preloadReady = async people => {};
   const revealPhotos = () => gameView.querySelectorAll('.pick-card').forEach(card => {
-    const image = card.querySelector('img');
-    if (!image) { card.classList.add('photo-ready'); return; }
-    const personId = Number(card.dataset.id);
-    if (Number(image.dataset.personId) !== personId) return;
-    const ready = () => {
-      if (Number(card.dataset.id) === personId) card.classList.add('photo-ready');
-    };
-    if (typeof image.decode === 'function') image.decode().then(ready, ready);
-    else if (image.complete) ready();
-    else {
-      image.addEventListener('load', ready, {once:true});
-      image.addEventListener('error', ready, {once:true});
-    }
-    setTimeout(ready, 700);
-  });
+  card.classList.add('photo-ready');
+});
   const timeNow = () => (typeof performance !== 'undefined' ? performance.now() : Date.now());
   const recordDecision = enteredAt => {
     if (!flowState) return;
